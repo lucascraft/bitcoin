@@ -1,0 +1,654 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir="ltr" lang="en"><head>
+<title>Wiimote/Extension Controllers/Wii Motion Plus - WiiBrew</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="MediaWiki 1.16.5">
+<link rel="shortcut icon" href="http://wiibrew.org/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiibrew.org/w/opensearch_desc.php" title="WiiBrew">
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html">
+<link rel="alternate" type="application/atom+xml" title="WiiBrew Atom feed" href="http://wiibrew.org/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="stylesheet" href="Wii_Motion_Plus_fichiers/shared.css" media="screen">
+<link rel="stylesheet" href="Wii_Motion_Plus_fichiers/commonPrint.css" media="print">
+<link rel="stylesheet" href="Wii_Motion_Plus_fichiers/main.css" media="screen">
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/w/skins/monobook/IE50Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/w/skins/monobook/IE55Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/w/skins/monobook/IE60Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/w/skins/monobook/IE70Fixes.css?270" media="screen" /><![endif]-->
+<link rel="stylesheet" href="Wii_Motion_Plus_fichiers/index.css">
+<link rel="stylesheet" href="Wii_Motion_Plus_fichiers/index_003.css" media="print">
+<link rel="stylesheet" href="Wii_Motion_Plus_fichiers/index_002.css">
+<link rel="stylesheet" href="Wii_Motion_Plus_fichiers/index_004.css">
+<script>
+var skin="monobook",
+stylepath="/w/skins",
+wgUrlProtocols="http\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/wiki/$1",
+wgScriptPath="/w",
+wgScriptExtension=".php",
+wgScript="/w/index.php",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="http://wiibrew.org",
+wgCanonicalNamespace="",
+wgCanonicalSpecialPageName=false,
+wgNamespaceNumber=0,
+wgPageName="Wiimote/Extension_Controllers/Wii_Motion_Plus",
+wgTitle="Wiimote/Extension Controllers/Wii Motion Plus",
+wgAction="view",
+wgArticleId=13664,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="en",
+wgContentLanguage="en",
+wgBreakFrames=false,
+wgCurRevisionId=97399,
+wgVersion="1.16.5",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="Main Page",
+wgFormattedNamespaces={"-2": "Media", "-1": "Special", "0": "", "1": "Talk", "2": "User", "3": "User talk", "4": "WiiBrew", "5": "WiiBrew talk", "6": "File", "7": "File talk", "8": "MediaWiki", "9": "MediaWiki talk", "10": "Template", "11": "Template talk", "12": "Help", "13": "Help talk", "14": "Category", "15": "Category talk"},
+wgNamespaceIds={"media": -2, "special": -1, "": 0, "talk": 1, "user": 2, "user_talk": 3, "wiibrew": 4, "wiibrew_talk": 5, "file": 6, "file_talk": 7, "mediawiki": 8, "mediawiki_talk": 9, "template": 10, "template_talk": 11, "help": 12, "help_talk": 13, "category": 14, "category_talk": 15, "image": 6, "image_talk": 7},
+wgSiteName="WiiBrew",
+wgCategories=["Hardware"],
+wgRestrictionEdit=[],
+wgRestrictionMove=[];
+</script><script src="Wii_Motion_Plus_fichiers/wikibits.js"></script>
+<script src="Wii_Motion_Plus_fichiers/ajax.js"></script>
+<script src="Wii_Motion_Plus_fichiers/index.js"></script>
+
+</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Wiimote_Extension_Controllers_Wii_Motion_Plus skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	<div id="siteNotice"><script type="text/javascript" language="JavaScript">
+<!--
+document.writeln("\x3ctable border=\"0\" cellpadding=\"0\" cellspacing=\"20\"\x3e\x3ctr\x3e\x3ctd\x3e\x3cscript type=\"text/javascript\"\x3evar flattr_url = \'http://www.wiibrew.org\';\x3c/script\x3e\x3cscript src=\"http://api.flattr.com/button/load.js\" type=\"text/javascript\"\x3e\x3c/script\x3e\x3c/td\x3e\x3ctd\x3e\n\x3ccenter\x3e\x3cspan style=\"font-size:125%;\"\x3eWiiBrew recommends that you run the latest version of the \x3ca href=\"http://bootmii.org/download/\" class=\"external text\" rel=\"nofollow\"\x3eHackMii Installer\x3c/a\x3e and then optionally update your Wii to 4.3 using Nintendo\'s official updater.\x3cbr/\x3e\x3cbr/\x3e \x3cb\x3eOnly update using the official update procedure.\x3c/b\x3e Downgrading or installing patched updates is unsupported, dangerous, and may permanently brick your Wii.\x3c/span\x3e\n\x3c/center\x3e\n\x3cp\x3e\x3cbr /\x3e\n\x3c/p\x3e\n\x3c/td\x3e\x3c/tr\x3e\x3c/table\x3e\x3ccenter\x3e\x3ctable border=0\x3e\x3ctr\x3e\x3ctd\x3e\n\x3cp\x3e\x3cscript type=\"text/javascript\"\x3e\x3c!--\ngoogle_ad_client = \"pub-3899269781065018\";\ngoogle_ad_slot = \"0711362224\";\ngoogle_ad_width = 728;\ngoogle_ad_height = 90;\n//--\x3e\n\x3c/script\x3e\n\x3cscript type=\"text/javascript\"\nsrc=\"http://pagead2.googlesyndication.com/pagead/show_ads.js\"\x3e\n\x3c/script\x3e\n\x3c/p\x3e\n\x3c/td\x3e\x3ctd valign=center\x3e\x3c/td\x3e\x3c/tr\x3e\x3c/table\x3e\x3c/center\x3e\n");
+-->
+</script><table border="0" cellpadding="0" cellspacing="20"><tbody><tr><td><script type="text/javascript">var flattr_url = 'http://www.wiibrew.org';</script><iframe allowtransparency="true" marginwidth="0" marginheight="0" border="0" src="Wii_Motion_Plus_fichiers/a.html" frameborder="0" height="62" scrolling="no" width="55"></iframe><script src="Wii_Motion_Plus_fichiers/load.js" type="text/javascript"></script></td><td>
+<center><span style="font-size:125%;">WiiBrew recommends that you run the latest version of the <a href="http://bootmii.org/download/" class="external text" rel="nofollow">HackMii Installer</a> and then optionally update your Wii to 4.3 using Nintendo's official updater.<br><br> <b>Only update using the official update procedure.</b> Downgrading or installing patched updates is unsupported, dangerous, and may permanently brick your Wii.</span>
+</center>
+<p><br>
+</p>
+</td></tr></tbody></table><center><table border="0"><tbody><tr><td>
+<p><script type="text/javascript"><!--
+google_ad_client = "pub-3899269781065018";
+google_ad_slot = "0711362224";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="Wii_Motion_Plus_fichiers/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><iframe allowtransparency="true" hspace="0" marginwidth="0" marginheight="0" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){i+='.call';setTimeout(h,0)}else if(h.match){i+='.nav';w.location.replace(h)}s.log&amp;&amp;s.log.push(i)}" vspace="0" id="aswift_0" name="aswift_0" style="left: 0pt; position: absolute; top: 0pt;" frameborder="0" height="90" scrolling="no" width="728"></iframe></ins></ins>
+</p>
+</td><td valign="center"></td></tr></tbody></table></center>
+
+</div>
+	<h1 id="firstHeading" class="firstHeading">Wiimote/Extension Controllers/Wii Motion Plus</h1>
+	<div id="bodyContent">
+		<h3 id="siteSub">From WiiBrew</h3>
+		<div id="contentSub"><span class="subpages">&lt; <a href="http://wiibrew.org/wiki/Wiimote" title="Wiimote">Wiimote</a> | <a href="http://wiibrew.org/wiki/Wiimote/Extension_Controllers" title="Wiimote/Extension Controllers">Extension Controllers</a></span></div>
+		<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+		<!-- start content -->
+<table id="toc" class="toc"><tbody><tr><td><div id="toctitle"><h2>Contents</h2> <span class="toctoggle">[<a href="javascript:toggleToc()" class="internal" id="togglelink">hide</a>]</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_Format"><span class="tocnumber">1</span> <span class="toctext">Data Format</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Nunchuck_pass-through_mode"><span class="tocnumber">1.1</span> <span class="toctext">Nunchuck pass-through mode</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Classic_Controller_pass-through_mode"><span class="tocnumber">1.2</span> <span class="toctext">Classic Controller pass-through mode</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Hardware"><span class="tocnumber">2</span> <span class="toctext">Hardware</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Information"><span class="tocnumber">3</span> <span class="toctext">Information</span></a></li>
+</ul>
+</td></tr></tbody></table><script>if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<p>The Wii Motion Plus starts off at register 0xA60000 instead of 
+register 0xA40000, because it has its own extension port on the back 
+allowing a Nunchuk for example to be plugged in along with the Wii 
+Motion Plus. BUT it changes to 0xA40000 once it is activated by writing 
+04 to 0xa600fe.
+</p><p>The Wii Motion Plus is first identified by the 6 bytes: 00 00 A6 
+20 00 05 at register address 0x(4)a600fa (instead of 0x(4)a400fa like a 
+regular extension). Games attempt to detect the Wii Motion Plus by 
+trying to read the two-byte expansion identifier at 0xA600FE (they try 
+up to 3 times, then wait 8 seconds, then check again). If a Wii Motion 
+Plus is not present, or it has already been activated, then the attempt 
+to read those bytes will fail with error 7.
+</p><p>The extension is initialised by writing 0x55 to 0x(4)a600f0. But 
+there is no need to write 00 to 0x(4)a500fb, since Wii games don't do 
+that. While the Motion Plus is initialising, the value at 0x(4)a600f7 
+changes from 0x02 to 0x04 to 0x08 to 0x0C to 0x0E then stays at 0x0E. 
+There is no need to read this byte, since games don't. While 
+initialising, the 128 bytes from 0x(4)a60050 - 0x(4)a600cf also change 
+briefly, but randomly, after the extension is initialized. More examples
+ of this data block changing over time can be found here: <a href="https://docs.google.com/Doc?id=dds4pks_606fmcd6zwt&amp;hl=en" class="external text" rel="nofollow">Three Data Samples from Wii Motion Plus (Google Doc)</a>
+</p><p>It appears that the 32 bytes from 0x(4)a60020 are, as usual, calibration information, but it is unknown how they work. 
+</p><p>Writing 0x04 to 0x(4)A600FE activates the MotionPlus as the 
+"active" extension. This does 3 things (with no additional 
+initialization):
+</p>
+<ul><li> A status report (0x20) will automatically be sent indicating 
+that a normal extension has been plugged in, if and only if there was no
+ extension plugged into the MotionPlus pass-through extension port.
+</li><li> The standard extension identifier at 0x(4)A400FA now reads 00 00 A4 20 04 05
+</li><li> Extension reports now contain MotionPlus data. 
+</li></ul>
+<p>Writing 0x55 to 0x(4)A400F0 deactivates the MotionPlus, and activates
+ the Nunchuk or other extension plugged into the back of the Motion 
+Plus. It does these things (with no additional initialization):
+</p>
+<ul><li> A status report (0x20) will always be sent indicating that a normal extension has been unplugged.
+</li><li> The Motion Plus extension identifier at 0x(4)A600FA now reads 00 00 A6 20 04 05
+</li><li> Another status report (0x20) will always be sent indicating that a normal extension has been plugged in.
+</li><li> The standard extension block at 0x(4)A40000 now reads from the Nunchuk (or other extension)
+</li><li> Extension reports no longer contain MotionPlus data
+</li></ul>
+<p><br>
+</p><p>It is possible to read from both Motion Plus and an extension 
+controller at the same time by activating the MotionPlus in one of the 
+pass-through modes suggested by DogP. When activated, this interleaves 
+extension controller data with MotionPlus data on every other read. Data
+ passing through are modified to make room for 3 bookkeeping bits. Two 
+pass-through modes are currently known, one with modifications adapted 
+to the NunChuck, and one with modifications adapted to the Classic 
+Controller (but suitable for Guitar, Drums, or Turntable).
+</p><p>Nunchuck pass-through mode&nbsp;:
+</p>
+<ul><li> Activated by writing 0x05 instead of 0x04 to 0x(4)A600FE
+</li><li> Data passing through drops the least significant bit of the three accelerometer values
+</li><li> Bit 7 of byte 5 is moved to bit 6 of byte 5, overwriting it
+</li><li> Bit 0 of byte 4 is moved to bit 7 of byte 5
+</li><li> Bit 3 of byte 5 is moved to bit 4 of byte 5, overwriting it
+</li><li> Bit 1 of byte 5 is moved to bit 3 of byte 5
+</li><li> Bit 0 of byte 5 is moved to bit 2 of byte 5, overwriting it
+</li></ul>
+<p>Classic Controller or Musical Instrument pass-through mode:
+</p>
+<ul><li> Activated by writing 0x07 instead of 0x04 to 0x(4)A600FE
+</li><li> Data passing through drops the least significant bit of the axes of the left (or only) joystick
+</li><li> Bit 0 of Byte 4 is overwritten
+</li><li> Bits 0 and 1 of Byte 5 are moved to bit 0 of Bytes 0 and 1, overwriting what was there before
+</li></ul>
+<p>There is no requirement to use the correct mode for the extension, 
+but otherwise the bitshift/move wouldn't make sense. Using the Nunchuk 
+in classic controller mode would clobber a significant bit in the middle
+ of the Z acceleration. Using the Classic controller in Nunchuk mode 
+would clobber some of the buttons.
+</p><p><br>
+</p>
+<h2> <span class="mw-headline" id="Data_Format"> Data Format </span></h2>
+<p>The Wii Motion Plus reports its information as 6 bytes of data, 
+readable at 0x(4)a40008 (or 0x(4)a40000 in some cases) and streamable 
+using Data Reporting Modes that include Extension bytes (unused bytes 
+are filled with 0x00). The data is packed into the six bytes as follows:
+</p>
+<table style="border-collapse: collapse; padding: 0.2em; text-align: center;">
+
+<tbody><tr style="background-color: rgb(221, 221, 221);">
+<td style="background-color: rgb(255, 255, 255);"> &nbsp;
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; text-align: center;" colspan="8"> <b>Bit</b>
+</td></tr>
+<tr style="background-color: rgb(204, 221, 204);">
+<td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(221, 221, 221);"> <b>Byte</b>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; width: 3.3em;"> <b>7</b>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; width: 3.3em;"> <b>6</b>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; width: 3.3em;"> <b>5</b>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; width: 3.3em;"> <b>4</b>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; width: 3.3em;"> <b>3</b>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; width: 3.3em;"> <b>2</b>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; width: 3.3em;"> <b>1</b>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; width: 3.3em;"> <b>0</b>
+</td></tr>
+<tr style="background-color: rgb(221, 238, 221);">
+<td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(238, 238, 238);"> 0
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;" colspan="8"> <b>Yaw Down Speed</b><span style="color: #777;">&lt;<span style="color: #c00;">7:0</span>&gt;</span>
+</td></tr>
+<tr style="background-color: rgb(221, 238, 221);">
+<td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(238, 238, 238);"> 1
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;" colspan="8"> <b>Roll Left Speed</b><span style="color: #777;">&lt;<span style="color: #c00;">7:0</span>&gt;</span>
+</td></tr>
+<tr style="background-color: rgb(221, 238, 221);">
+<td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(238, 238, 238);"> 2
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;" colspan="8"> <b>Pitch Left Speed</b><span style="color: #777;">&lt;<span style="color: #c00;">7:0</span>&gt;</span>
+</td></tr>
+<tr style="background-color: rgb(221, 238, 221);">
+<td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(238, 238, 238);"> 3
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;" colspan="6"> <b>Yaw Down Speed</b><span style="color: #777;">&lt;<span style="color: #c00;">13:8</span>&gt;</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;"> <b>Yaw slow mode</b>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;"> <b>Pitch slow mode</b>
+</td></tr>
+<tr style="background-color: rgb(221, 238, 221);">
+<td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(238, 238, 238);"> 4
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;" colspan="6"> <b>Roll Left Speed</b><span style="color: #777;">&lt;<span style="color: #c00;">13:8</span>&gt;</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;"> <b>Roll slow mode</b>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;"> <b>Extension connected</b>
+</td></tr>
+<tr style="background-color: rgb(221, 238, 221);">
+<td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(238, 238, 238);"> 5
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;" colspan="6"> <b>Pitch Left Speed</b><span style="color: #777;">&lt;<span style="color: #c00;">13:8</span>&gt;</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(221, 221, 221); color: rgb(136, 136, 136);"> 1
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(221, 221, 221); color: rgb(136, 136, 136);"> 0
+</td></tr></tbody></table>
+<p>While the Wiimote is still, the values will be about 0x1F7F (8,063), 
+although it is best to calibrate for a few seconds every time you start,
+ to get the actual zero values.
+</p><p>Voltage reference is 1.35V that you can assume it as 8192 unit 
+(half of the ADC range), using 2.27 mV/deg/s, 8192 is 595 deg/s 
+(1.35V/2.27mV), you must divide by  ~13.768 unit/deg/s (8192/595) to 
+know the correct deg/s.
+</p><p>At high speed (slow bit = 0) raw values read are small with the 
+same deg/s to reach higher values on top, so you must multiply it by 
+2000/440 (they are the max reference in the two modes in deg/s <a href="http://invensense.com/mems/gyro/idg650.html" class="external autonumber" rel="nofollow">[1]</a>).
+ Example: reading 8083 raw value and assuming 8063 as zero, 20 unit in 
+slow/normal mode are 1,45 deg/s and in fast mode are 1.45*2000/440=6.59 
+deg/s.
+</p><p>Yaw/Roll/Pitch fast/slow bits are 1 when the Wii Remote is 
+rotating slowly (or not rotating at all), 0 when the Wii Remote is 
+rotating fast.
+</p><p>Extension connected is 1 when an extension is connected to the MotionPlus extension port.
+</p><p>Note: The definition of yaw, pitch, and roll, are slightly 
+different for the gyros and accelerometers. Accelerometers measure 
+angles relative to gravity. Gyros measure angles relative to the Wii 
+Remote. If the Wii Remote is up the right way, then they are the same. 
+But if the Wii Remote is on its side, then what the gyros call "pitch" 
+is actually what the accelerometers would call "yaw". 
+</p><p>The correct way to measure orientation is to maintain a rotation 
+matrix (or alternatively a quaternion) of the current orientation 
+(relative to gravity), and update it each time you get a gyro reading. 
+It will drift a little, so you should reset the matrix's pitch and roll 
+(but not yaw) with the values from the accelerometers whenever the 
+accelerometers and gyros indicate no movement. After significant 
+rotation, you should reset the matrix's yaw to zero when the Wii Remote 
+is pointing near the middle (horizontally) of the sensor bar.
+</p><p><br>
+</p>
+<h3> <span class="mw-headline" id="Nunchuck_pass-through_mode"> Nunchuck pass-through mode </span></h3>
+<p>In this mode, MotionPlus data and modified Nunchuck data are 
+interleaved, you can retrieve one set of data every 3ms (one wm+, one 
+nunchuck, one wm+ and so on).
+First 6 byte are the motion plus, send a byte 0, wait some time that WM+
+ retrieve and overwrite its buffer, and now read other 6 byte that are 
+the nunchuck data.
+If you don't wait some time (3ms between every request), WM+ give 
+incorrect data, mixing byte with nunchuck.
+The data format for the Motion Plus does not change, but the data format
+ of the nunchuck is different than the normal way:
+</p><p><br>
+</p>
+<table style="border-collapse: collapse; padding: 0.2em; text-align: center;">
+
+<tbody><tr style="background-color: rgb(221, 221, 221);">
+<td style="background-color: rgb(255, 255, 255);"> &nbsp;
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; text-align: center;" colspan="8"> <b>Bit</b>
+</td></tr>
+<tr style="background-color: rgb(204, 221, 204);">
+<td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(221, 221, 221);"> <b>Byte</b>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; width: 3.3em;"> <b>7</b>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; width: 3.3em;"> <b>6</b>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; width: 3.3em;"> <b>5</b>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; width: 3.3em;"> <b>4</b>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; width: 3.3em;"> <b>3</b>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; width: 3.3em;"> <b>2</b>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; width: 3.3em;"> <b>1</b>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; width: 3.3em;"> <b>0</b>
+</td></tr>
+<tr style="background-color: rgb(221, 238, 221);">
+<td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(238, 238, 238);"> 0
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;" colspan="8"> <b>SX</b><span style="color: #777;">&lt;<span style="color: #c00;">7:0</span>&gt;</span>
+</td></tr>
+<tr style="background-color: rgb(221, 238, 221);">
+<td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(238, 238, 238);"> 1
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;" colspan="8"> <b>SY</b><span style="color: #777;">&lt;<span style="color: #c00;">7:0</span>&gt;</span>
+</td></tr>
+<tr style="background-color: rgb(221, 238, 221);">
+<td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(238, 238, 238);"> 2
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;" colspan="8"> <b>AX</b><span style="color: #777;">&lt;<span style="color: #c00;">9:2</span>&gt;</span>
+</td></tr>
+<tr style="background-color: rgb(221, 238, 221);">
+<td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(238, 238, 238);"> 3
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;" colspan="8"> <b>AY</b><span style="color: #777;">&lt;<span style="color: #c00;">9:2</span>&gt;</span>
+</td></tr>
+<tr style="background-color: rgb(221, 238, 221);">
+<td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(238, 238, 238);"> 4
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;" colspan="7"> <b>AZ</b><span style="color: #777;">&lt;<span style="color: #c00;">9:3</span>&gt;</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;"> <b>Extension connected</b>
+</td></tr>
+<tr style="background-color: rgb(221, 238, 221);">
+<td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(238, 238, 238);"> 5
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;" colspan="2"> <b>AZ</b><span style="color: #777;">&lt;<span style="color: #c00;">2:1</span>&gt;</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;" colspan="1"> <b>AY</b><span style="color: #777;">&lt;<span style="color: #c00;">1</span>&gt;</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;" colspan="1"> <b>AX</b><span style="color: #777;">&lt;<span style="color: #c00;">1</span>&gt;</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;"> <b>B</b><span style="color: #c00;">C</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;"> <b>B</b><span style="color: #c00;">Z</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(221, 221, 221); color: rgb(136, 136, 136);"> 0
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(221, 221, 221); color: rgb(136, 136, 136);"> 0
+</td></tr></tbody></table>
+<p><br>
+Note that AZ, BC and BZ  and the least significant bits of AX, AY and AZ
+ are moved. Also, the least significant bit of each accelerometer axis 
+are lost, consider them 0 to keep 10 bit values. Extension connected is 
+usually 1.
+</p><p>Bit 1 of Byte 5 is used to determine which type of report is 
+received&nbsp;: it is 1 when it contains MotionPlus Data and 0 when it 
+contains extension data.
+</p>
+<h3> <span class="mw-headline" id="Classic_Controller_pass-through_mode"> Classic Controller pass-through mode </span></h3>
+<p>In this mode, MotionPlus data and modified Classic Controller data 
+are interleaved. The data format for the Motion Plus does not change. 
+Here is the data format <b>for the Classic Controller</b> in this mode:
+</p><p><br>
+</p>
+<table style="border-collapse: collapse; padding: 0.2em; text-align: center;">
+
+<tbody><tr style="background-color: rgb(221, 221, 221);">
+<td style="background-color: rgb(255, 255, 255);"> &nbsp;
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; text-align: center;" colspan="8"> <b>Bit</b>
+</td></tr>
+<tr style="background-color: rgb(204, 221, 204);">
+<td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(221, 221, 221);"> <b>Byte</b>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; width: 3.3em;"> <b>7</b>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; width: 3.3em;"> <b>6</b>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; width: 3.3em;"> <b>5</b>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; width: 3.3em;"> <b>4</b>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; width: 3.3em;"> <b>3</b>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; width: 3.3em;"> <b>2</b>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; width: 3.3em;"> <b>1</b>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; width: 3.3em;"> <b>0</b>
+</td></tr>
+<tr style="background-color: rgb(221, 238, 221);">
+<td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(238, 238, 238);"> 0
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;" colspan="2"> <b>RX</b><span style="color: #777;">&lt;<span style="color: #c00;">4:3</span>&gt;</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;" colspan="5"> <b>LX</b><span style="color: #777;">&lt;<span style="color: #c00;">5:1</span>&gt;</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;"> <b>B</b><span style="color: #c00;">DU</span>
+</td></tr>
+<tr style="background-color: rgb(221, 238, 221);">
+<td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(238, 238, 238);"> 1
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;" colspan="2"> <b>RX</b><span style="color: #777;">&lt;<span style="color: #c00;">2:1</span>&gt;</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;" colspan="5"> <b>LY</b><span style="color: #777;">&lt;<span style="color: #c00;">5:1</span>&gt;</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;"> <b>B</b><span style="color: #c00;">DL</span>
+</td></tr>
+<tr style="background-color: rgb(221, 238, 221);">
+<td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(238, 238, 238);"> 2
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;"> <b>RX</b><span style="color: #777;">&lt;<span style="color: #c00;">0</span>&gt;</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;" colspan="2"> <b>LT</b><span style="color: #777;">&lt;<span style="color: #c00;">4:3</span>&gt;</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;" colspan="5"> <b>RY</b><span style="color: #777;">&lt;<span style="color: #c00;">4:0</span>&gt;</span>
+</td></tr>
+<tr style="background-color: rgb(221, 238, 221);">
+<td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(238, 238, 238);"> 3
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;" colspan="3"> <b>LT</b><span style="color: #777;">&lt;<span style="color: #c00;">2:0</span>&gt;</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;" colspan="5"> <b>RT</b><span style="color: #777;">&lt;<span style="color: #c00;">4:0</span>&gt;</span>
+</td></tr>
+<tr style="background-color: rgb(221, 238, 221);">
+<td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(238, 238, 238);"> 4
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;"> <b>B</b><span style="color: #c00;">DR</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;"> <b>B</b><span style="color: #c00;">DD</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;"> <b>B</b><span style="color: #c00;">LT</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;"> <b>B</b><span style="color: #c00;">-</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;"> <b>B</b><span style="color: #c00;">H</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;"> <b>B</b><span style="color: #c00;">+</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;"> <b>B</b><span style="color: #c00;">RT</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;"> <b>Extension connected</b>
+</td></tr>
+<tr style="background-color: rgb(221, 238, 221);">
+<td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(238, 238, 238);"> 5
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;"> <b>B</b><span style="color: #c00;">ZL</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;"> <b>B</b><span style="color: #c00;">B</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;"> <b>B</b><span style="color: #c00;">Y</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;"> <b>B</b><span style="color: #c00;">A</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;"> <b>B</b><span style="color: #c00;">X</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em;"> <b>B</b><span style="color: #c00;">ZR</span>
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(221, 221, 221); color: rgb(136, 136, 136);"> 0
+</td><td style="border: 1px solid rgb(204, 204, 204); padding: 0.2em; background-color: rgb(221, 221, 221); color: rgb(136, 136, 136);"> 0
+</td></tr></tbody></table>
+<p><br>
+Note that BDL and BDU are moved, and each axis of the left joystick 
+loses its least significant bit. Extension connected is usually 1.
+</p><p>Bit 1 of Byte 5 is used to determine which type of report is 
+received&nbsp;: it is 1 when it contains MotionPlus Data and 0 when it 
+contains extension data.
+</p>
+<h2> <span class="mw-headline" id="Hardware"> Hardware </span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="http://wiibrew.org/wiki/File:Wii_MotionPlus_top.jpg" class="image"><img alt="" src="Wii_Motion_Plus_fichiers/200px-Wii_MotionPlus_top.jpg" class="thumbimage" height="208" width="200"></a>  <div class="thumbcaption"><div class="magnify"><a href="http://wiibrew.org/wiki/File:Wii_MotionPlus_top.jpg" class="internal" title="Enlarge"><img src="Wii_Motion_Plus_fichiers/magnify-clip.png" alt="" height="11" width="15"></a></div>Wii Motion Plus, circuit board, top</div></div></div><div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="http://wiibrew.org/wiki/File:Wii_MotionPlus_bottom.jpg" class="image"><img alt="" src="Wii_Motion_Plus_fichiers/200px-Wii_MotionPlus_bottom.jpg" class="thumbimage" height="211" width="200"></a>  <div class="thumbcaption"><div class="magnify"><a href="http://wiibrew.org/wiki/File:Wii_MotionPlus_bottom.jpg" class="internal" title="Enlarge"><img src="Wii_Motion_Plus_fichiers/magnify-clip.png" alt="" height="11" width="15"></a></div>Wii Motion Plus, circuit board, bottom</div></div></div>The Wii Motion Plus contains two gyro sensors: A dual-axis gyro by InvenSense, the <a href="http://www.invensense.com/products/idg_600.html" class="external text" rel="nofollow">IDG-600</a>(pitch and roll), and a single-axis gyro by EPSON TOYOCOM labelled <i>X3500W</i> (yaw).
+<p>Until its release it was speculated that only a dual-axis gyro was 
+included in the Wii Motion Plus. The combined use of a dual-axis gyro 
+and a single-axis gyro is what enables the Wii Motion Plus to report the
+ angular rate in all three axis, thus allowing full orientation 
+tracking.
+</p><p>Specifications of the X3500W are currently unknown, but may be similar to the specifications of the similarly named <a href="http://www.epsontoyocom.co.jp/english/product/Sensor/set01/xv3500cb/index.html" class="external text" rel="nofollow">XV-3500CB</a> (same manufacturer.)
+</p><p>Wii MotionPlus contains RVL-GU chip and EEPROM. RVL-GU chip is a 
+microprocessor NEC 78K0/KC2. It has two firmware modes. I2C bus repeater
+ mode and 'Activated' Gyro mode.
+<a href="http://www.kako.com/neta/2009-017/2009-017.html" class="external text" rel="nofollow">Wii_motion_plus_kaiseki</a> (japanese)
+</p>
+<h2> <span class="mw-headline" id="Information"> Information </span></h2>
+<p>When not activated, the MotionPlus is detected by regular polling 
+(every 8 seconds or so) of 0x(4)a600fe. Writing 0x55 to 0x4A400F0, then 
+0x00 to 0x4A400FB (standard extension init, works fine even with no 
+extension) re-activates the standard extension, if any, plugged into the
+ MotionPlus pass-through port. The development version of the CWiid 
+driver currently implements this method (without automatic 8 second 
+checks) on the motionplus branch: <a href="http://abstrakraft.org/cwiid/browser/branches/motionplus/" class="external free" rel="nofollow">http://abstrakraft.org/cwiid/browser/branches/motionplus/</a>. Additional information on MotionPlus workings and implementation requirements are at <a href="http://abstrakraft.org/cwiid/wiki/MotionPlus" class="external free" rel="nofollow">http://abstrakraft.org/cwiid/wiki/MotionPlus</a>.
+</p><p>The combination of 3 linear accelerations with 3 angular rates 
+allows what Nintendo refers to as 1:1 motion tracking, which is another 
+way of saying 6DOF (degrees of freedom) over a short time. It's only 
+valid over short times because of the integration involved to convert 
+accelerations and rates into positions (input errors, when integrated, 
+blow up over time).
+</p><p>In addition to providing yaw, the gyros also allow the software 
+to tell the difference between orientation and acceleration, which are 
+difficult to tell apart from the accelerometers which measure a mixture 
+of both.
+</p><p><a href="http://www.ailive.net/lm2.html" class="external text" rel="nofollow">Wii Motion Plus Documentation at AiLive</a>
+</p><p><br>
+Reading 0x100 bytes from 0x(4)a60000 produces the following:
+</p>
+<pre>4a60000: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+4a60010: 00 00 00 00 00 ff ff ff ff ff ff ff ff ff ff ff 
+4a60020: 78 d9 78 38 77 9d 2f 0c cf f0 31 ad c8 0b 5e 39 
+4a60030: 6f 81 7b 89 78 51 33 60 c9 f5 37 c1 2d e9 15 8d 
+4a60040: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+4a60050: b9 3f 25 93 9d 17 bb 9c 05 9d c3 38 18 3c ba 33 
+4a60060: ba 18 d1 7a bc 03 d3 55 32 ec 81 38 7d a6 77 a8 
+4a60070: 4c e6 c7 11 7c 50 78 80 77 35 08 81 f6 14 4e 67 
+4a60080: d4 b5 cb de 6a 54 5f 66 3c c4 25 fd 33 da 1d 75 
+4a60090: 58 98 15 6d 5e 63 51 ee 8f dd 3a b2 94 fe 5b 58 
+4a600a0: bf 17 91 78 7f 84 b4 9b b0 f9 75 c2 2e 7f 1f ed 
+4a600b0: e5 6b 02 f4 f2 7d 74 17 3d 23 35 5c e0 72 22 6e 
+4a600c0: 3b a7 7b 65 6c 3c 72 7e 5b ae e7 09 09 f0 01 00 
+4a600d0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+4a600e0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+4a600f0: 55 ff ff ff ff ff ff 10 ff ff 00 00 a6 20 00 05 
+</pre>
+<p>A different (Carl Kenner's) Wiimote and Motion Plus:
+</p>
+<pre>4a60000: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+4a60010: 00 00 00 00 00 ff ff ff ff ff ff ff ff ff ff ff 
+4a60020: 79 83 73 54 72 E8 30 C3 CC 4A 34 FC C8 4F CC 5B
+4a60030: 77 49 75 A4 73 9A 35 52 CA 22 37 26 2D E5 B5 A2
+4a60040: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+4a60050: 78 76 DD F5 6A 3C CF F7 2A 0E 32 EE 82 FE 2E FD
+4a60060: 19 E7 0A CA 67 3B 3A 75 F6 45 55 8E 9D 33 CC EA
+4a60070: 6E 52 C6 C6 16 9B EE 12 2E 3F 77 B1 A1 80 0B 0E
+4a60080: C2 25 05 EA C3 2F 85 1E 31 53 74 C7 F1 93 F1 2D 
+4a60090: C1 6D 84 2A D8 6F 8A E5 2D 3B 7B CC D2 59 D5 D1 
+4a600A0: 9F 5B 6F AE 82 DE EA C3 73 42 06 A9 77 FF 61 A8 
+4a600B0: 1A 70 E4 16 90 7A 80 F7 79 4B 41 18 82 6C 62 1A 
+4a600C0: 3B BF FC FF 2C F2 32 97 B8 2F 17 E7 BD 35 1D 0A 
+4a600d0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+4a600e0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+4a600f0: 55 ff ff ff ff ff ff 10 ff ff 00 00 a6 20 00 05 
+</pre>
+<p>Two more:
+</p>
+<pre>4a60000: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+4a60010: 00 00 00 00 00 ff ff ff ff ff ff ff ff ff ff ff 
+4a60020: 7a 1a 79 ac 79 86 2f 2c d3 6a 2e ed c8 03 67 3c 
+4a60030: 6b d2 7b cf 7b 05 35 1c cd 3c 34 88 2d b6 c9 e8 
+4a60040: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+4a60050: 69 cf 84 40 81 7b e2 6b 9a d7 95 c6 36 6e 98 38 
+4a60060: 8d 50 41 45 f5 aa 3f b6 f7 2b 6e 55 6a 72 00 f8 
+4a60070: 79 4f bd 5f 51 34 b5 6e f5 2e 6d fb a3 10 05 b0 
+4a60080: c9 c7 68 2c ef d9 e0 2c 3f ce e8 3c b8 21 61 3f 
+4a60090: b7 6d 18 44 07 af 5b 01 3e 1c 40 83 d3 f2 89 d0 
+4a600a0: 76 55 f9 ac e8 03 0a 16 f9 92 b0 59 49 69 3b 04 
+4a600b0: d8 d1 fe 39 b1 23 5c f7 fc 40 36 c9 34 c8 31 e7 
+4a600c0: f4 0d cc 4d f3 e6 f5 10 b6 1f 76 18 d1 42 32 0c 
+4a600d0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+4a600e0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+4a600f0: 55 ff ff ff ff ff ff 10 ff ff 00 00 a6 20 00 05
+</pre>
+<p>and
+</p>
+<pre>4a60000: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+4a60010: 00 00 00 00 00 ff ff ff ff ff ff ff ff ff ff ff 
+4a60020: 7c 3a 77 b1 77 e3 2f 56 d4 4b 31 13 c8 03 04 8c 
+4a60030: 83 ca 79 4b 7a 68 34 ef d1 2a 34 58 2d b4 12 41 
+4a60040: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+4a60050: f9 f4 30 55 14 64 20 2d e3 f0 7b 30 49 dc 52 17 
+4a60060: 15 ab e0 78 39 2c 9a 30 6b 93 24 83 b4 88 6f 07 
+4a60070: 3e 94 17 b5 cf 8b 1f c8 50 a4 6a 15 49 71 99 49 
+4a60080: 39 5c d1 f8 43 f4 f9 a9 67 e1 7b a6 11 e5 66 7e 
+4a60090: fb 1c 6e 6b 97 a7 f8 6e 9f 5a c7 7b c2 7b 82 cb 
+4a600a0: 17 44 e3 66 ef 03 25 ea 01 36 a7 a7 08 6f bd 69 
+4a600b0: a5 3f 02 5c 49 00 23 89 9d 35 36 a7 31 fb eb 77 
+4a600c0: a5 c3 c5 d8 3d 95 4c 76 f4 74 b4 ba 5b 09 25 1f 
+4a600d0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+4a600e0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
+4a600f0: 55 ff ff ff ff ff ff 10 ff ff 00 00 a6 20 00 05 
+</pre>
+
+<!-- Tidy found serious XHTML errors -->
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 94/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/500
+#(do)while count: 0/100
+-->
+
+<!-- Saved in parser cache with key WiiBrew-ch0pstik_:pcache:idhash:13664-0!1!0!!en!2!edit=0 and timestamp 20110713081223 -->
+<div class="printfooter">
+Retrieved from "<a href="http://wiibrew.org/wiki/Wiimote/Extension_Controllers/Wii_Motion_Plus">http://wiibrew.org/wiki/Wiimote/Extension_Controllers/Wii_Motion_Plus</a>"</div>
+		<div id="catlinks" class="catlinks"><div id="mw-normal-catlinks"><a href="http://wiibrew.org/wiki/Special:Categories" title="Special:Categories">Category</a>: <span dir="ltr"><a href="http://wiibrew.org/wiki/Category:Hardware" title="Category:Hardware">Hardware</a></span></div></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="http://wiibrew.org/wiki/Wiimote/Extension_Controllers/Wii_Motion_Plus" title="View the content page [ctrl-c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk" class="new"><a href="http://wiibrew.org/w/index.php?title=Talk:Wiimote/Extension_Controllers/Wii_Motion_Plus&amp;action=edit&amp;redlink=1" title="Discussion about the content page [ctrl-t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="http://wiibrew.org/w/index.php?title=Wiimote/Extension_Controllers/Wii_Motion_Plus&amp;action=edit" title="This page is protected.
+You can view its source [ctrl-e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="http://wiibrew.org/w/index.php?title=Wiimote/Extension_Controllers/Wii_Motion_Plus&amp;action=history" title="Past revisions of this page [ctrl-h]" accesskey="h">History</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="http://wiibrew.org/w/index.php?title=Special:UserLogin&amp;returnto=Wiimote/Extension_Controllers/Wii_Motion_Plus" title="You are encouraged to log in; however, it is not mandatory [ctrl-o]" accesskey="o">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(&quot;/w/images/c/cb/Wiibrew.png&quot;);" href="http://wiibrew.org/wiki/Main_Page" title="Visit the main page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5>Navigation</h5>
+		<div class="pBody">
+			<ul>
+				<li id="n-mainpage"><a href="http://wiibrew.org/wiki/Main_Page" title="Visit the main page [ctrl-z]" accesskey="z">Main Page</a></li>
+				<li id="n-FAQ"><a href="http://wiibrew.org/wiki/WiiBrew:FAQ">FAQ</a></li>
+				<li id="n-Glossary"><a href="http://wiibrew.org/wiki/Glossary">Glossary</a></li>
+				<li id="n-recentchanges"><a href="http://wiibrew.org/wiki/Special:RecentChanges" title="The list of recent changes in the wiki [ctrl-r]" accesskey="r">Recent changes</a></li>
+				<li id="n-randompage"><a href="http://wiibrew.org/wiki/Special:Random" title="Load a random page [ctrl-x]" accesskey="x">Random page</a></li>
+				<li id="n-Wiki-help"><a href="http://wiibrew.org/wiki/Help:Contents">Wiki help</a></li>
+				<li id="n-forums"><a href="http://forum.wiibrew.org/">WiiBrew forum</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-homebrew">
+		<h5>homebrew</h5>
+		<div class="pBody">
+			<ul>
+				<li id="n-News"><a href="http://wiibrew.org/wiki/WiiBrew:News">News</a></li>
+				<li id="n-Releases"><a href="http://wiibrew.org/wiki/WiiBrew:Homebrew_releases">Releases</a></li>
+				<li id="n-Applications"><a href="http://wiibrew.org/wiki/List_of_homebrew_applications">Applications</a></li>
+				<li id="n-Homebrew-channel"><a href="http://wiibrew.org/wiki/Homebrew_Channel">Homebrew channel</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/w/index.php" id="searchform">
+				<input name="title" value="Special:Search" type="hidden">
+				<input id="searchInput" title="Search WiiBrew" accesskey="f" name="search" type="search">
+				<input name="go" class="searchButton" id="searchGoButton" value="Go" title="Go to a page with this exact name if exists" type="submit">&nbsp;
+				<input name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" type="submit">
+			</form>
+		</div>
+	</div>
+<div id="v-g-ads" class="portlet">
+<h5>Resources</h5>
+<div class="pBody"><script type="text/javascript"><!--
+google_ad_client = "pub-3899269781065018";
+google_ad_slot = "4491806168";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+</script>
+<script type="text/javascript" src="Wii_Motion_Plus_fichiers/show_ads.js"></script><ins style="display:inline-table;border:none;height:240px;margin:0;padding:0;position:relative;visibility:visible;width:120px"><ins id="aswift_1_anchor" style="display:block;border:none;height:240px;margin:0;padding:0;position:relative;visibility:visible;width:120px"><iframe allowtransparency="true" hspace="0" marginwidth="0" marginheight="0" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){i+='.call';setTimeout(h,0)}else if(h.match){i+='.nav';w.location.replace(h)}s.log&amp;&amp;s.log.push(i)}" vspace="0" id="aswift_1" name="aswift_1" style="left: 0pt; position: absolute; top: 0pt;" frameborder="0" height="240" scrolling="no" width="120"></iframe></ins></ins></div></div>
+	<div class="generated-sidebar portlet" id="p-Community">
+		<h5>Community</h5>
+		<div class="pBody">
+			<ul>
+				<li id="n-Hackmii"><a href="http://hackmii.com/">Hackmii</a></li>
+				<li id="n-Other-sites"><a href="http://wiibrew.org/wiki/Other_homebrew_sites">Other sites</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="http://wiibrew.org/wiki/Special:WhatLinksHere/Wiimote/Extension_Controllers/Wii_Motion_Plus" title="List of all wiki pages that link here [ctrl-j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="http://wiibrew.org/wiki/Special:RecentChangesLinked/Wiimote/Extension_Controllers/Wii_Motion_Plus" title="Recent changes in pages linked from this page [ctrl-k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="http://wiibrew.org/wiki/Special:SpecialPages" title="List of all special pages [ctrl-q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="http://wiibrew.org/w/index.php?title=Wiimote/Extension_Controllers/Wii_Motion_Plus&amp;printable=yes" rel="alternate" title="Printable version of this page [ctrl-p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="http://wiibrew.org/w/index.php?title=Wiimote/Extension_Controllers/Wii_Motion_Plus&amp;oldid=97399" title="Permanent link to this revision of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="Wii_Motion_Plus_fichiers/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" height="31" width="88"></a></div>
+	<div id="f-copyrightico"><a href="http://www.gnu.org/copyleft/fdl.html"><img src="Wii_Motion_Plus_fichiers/gnu-fdl.png" alt="GNU Free Documentation License 1.2" height="31" width="88"></a></div>
+	<ul id="f-list">
+		<li id="lastmod"> This page was last modified on 11 July 2011, at 07:57.</li>
+		<li id="viewcount">This page has been accessed 10 times.</li>
+		<li id="copyright">Content is available under <a href="http://www.gnu.org/copyleft/fdl.html" class="external ">GNU Free Documentation License 1.2</a>.</li>
+		<li id="privacy"><a href="http://wiibrew.org/wiki/WiiBrew:Privacy_policy" title="WiiBrew:Privacy policy">Privacy policy</a></li>
+		<li id="about"><a href="http://wiibrew.org/wiki/WiiBrew:About" title="WiiBrew:About">About WiiBrew</a></li>
+		<li id="disclaimer"><a href="http://wiibrew.org/wiki/WiiBrew:General_disclaimer" title="WiiBrew:General disclaimer">Disclaimers</a></li>
+	</ul>
+</div>
+</div>
+
+<script>if (window.runOnloadHook) runOnloadHook();</script>
+<script src="Wii_Motion_Plus_fichiers/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4621510-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script><!-- Served in 0.272 secs. -->
+</body></html>

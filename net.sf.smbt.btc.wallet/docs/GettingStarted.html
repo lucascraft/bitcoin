@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html><head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+ 
+ <meta name="ROBOTS" content="NOARCHIVE">
+ 
+ <link rel="icon" type="image/vnd.microsoft.icon" href="http://www.gstatic.com/codesite/ph/images/phosting.ico">
+ 
+ 
+ <link rel="canonical" href="http://code.google.com/p/bitcoinj/wiki/GettingStarted">
+ 
+ <script async="" src="GettingStarted%20-%20bitcoinj%20-%20An%20introduction%20to%20using%20the%20library%20-%20A%20Java%20implementation%20of%20a%20Bitcoin%20client-only%20node%20-%20Google%20Project%20Hosting_fichiers/cbgapi.js"></script><script gapi_processed="true" src="GettingStarted%20-%20bitcoinj%20-%20An%20introduction%20to%20using%20the%20library%20-%20A%20Java%20implementation%20of%20a%20Bitcoin%20client-only%20node%20-%20Google%20Project%20Hosting_fichiers/plusone.js" async="" type="text/javascript"></script><script type="text/javascript">
+ 
+ 
+ 
+ 
+ var codesite_token = "wpwl0FbZUbkms2iuoCxojBPRgOU:1366401035364";
+ 
+ 
+ var CS_env = {"loggedInUserEmail":"lucas.bigeardel@gmail.com","relativeBaseUrl":"","projectHomeUrl":"/p/bitcoinj","assetVersionPath":"http://www.gstatic.com/codesite/ph/13714586478408612229","assetHostPath":"http://www.gstatic.com/codesite/ph","domainName":null,"projectName":"bitcoinj","token":"wpwl0FbZUbkms2iuoCxojBPRgOU:1366401035364","profileUrl":"/u/lucas.bigeardel@gmail.com/"};
+ var _gaq = _gaq || [];
+ _gaq.push(
+ ['siteTracker._setAccount', 'UA-18071-1'],
+ ['siteTracker._trackPageview']);
+ 
+ _gaq.push(
+ ['projectTracker._setAccount', 'UA-38300841-1'],
+ ['projectTracker._trackPageview']);
+ 
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+ })();
+ 
+ </script><script src="GettingStarted%20-%20bitcoinj%20-%20An%20introduction%20to%20using%20the%20library%20-%20A%20Java%20implementation%20of%20a%20Bitcoin%20client-only%20node%20-%20Google%20Project%20Hosting_fichiers/ga.js" async="" type="text/javascript"></script>
+ 
+ 
+ <title>GettingStarted - 
+ bitcoinj -
+ 
+ An introduction to using the library - 
+ A Java implementation of a Bitcoin client-only node - Google Project Hosting
+ </title>
+ <link type="text/css" rel="stylesheet" href="GettingStarted%20-%20bitcoinj%20-%20An%20introduction%20to%20using%20the%20library%20-%20A%20Java%20implementation%20of%20a%20Bitcoin%20client-only%20node%20-%20Google%20Project%20Hosting_fichiers/core.css">
+ 
+ <link type="text/css" rel="stylesheet" href="GettingStarted%20-%20bitcoinj%20-%20An%20introduction%20to%20using%20the%20library%20-%20A%20Java%20implementation%20of%20a%20Bitcoin%20client-only%20node%20-%20Google%20Project%20Hosting_fichiers/ph_detail.css">
+ 
+ 
+ 
+ <link type="application/atom+xml" rel="alternate" href="http://code.google.com/feeds/p/bitcoinj/gitchanges/basic?path=/GettingStarted.wiki&amp;repo=wiki">
+ 
+ 
+<!--[if IE]>
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/13714586478408612229/css/d_ie.css" >
+<![endif]-->
+ <style type="text/css">
+ .menuIcon.off { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -42px }
+ .menuIcon.on { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -28px }
+ .menuIcon.down { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 0; }
+ 
+ 
+ #maincol {
+ padding-top: 0;
+ padding-bottom: 0;
+ }
+
+ 
+ </style>
+</head>
+<body class="t6">
+<script type="text/javascript">
+ window.___gcfg = {lang: 'en'};
+ (function() 
+ {var po = document.createElement("script");
+ po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js";
+ var s = document.getElementsByTagName("script")[0];
+ s.parentNode.insertBefore(po, s);
+ })();
+</script>
+<div class="headbg">
+
+ <div id="gaia">
+ 
+
+ <span>
+ 
+ 
+ 
+ <b>lucas.bigeardel@gmail.com</b>
+ 
+ 
+ | <a href="http://code.google.com/u/lucas.bigeardel@gmail.com/" id="projects-dropdown" onclick="return false;"><u>My favorites</u> <small>▼</small></a>
+ | <a href="http://code.google.com/u/lucas.bigeardel@gmail.com/" onclick="_CS_click('/gb/ph/profile');" title="Profile, Updates, and Settings"><u>Profile</u></a>
+ | <a href="https://www.google.com/accounts/Logout?continue=http%3A%2F%2Fcode.google.com%2Fp%2Fbitcoinj%2Fwiki%2FGettingStarted" onclick="_CS_click('/gb/ph/signout');"><u>Sign out</u></a>
+ 
+ </span>
+
+ </div>
+
+ <div class="gbh" style="left: 0pt;"></div>
+ <div class="gbh" style="right: 0pt;"></div>
+ 
+ 
+ <div style="height: 1px"></div>
+<!--[if lte IE 7]>
+<div style="text-align:center;">
+Your version of Internet Explorer is not supported. Try a browser that
+contributes to open source, such as <a href="http://www.firefox.com">Firefox</a>,
+<a href="http://www.google.com/chrome">Google Chrome</a>, or
+<a href="http://code.google.com/chrome/chromeframe/">Google Chrome Frame</a>.
+</div>
+<![endif]-->
+
+
+
+ <table style="padding:0px; margin: 0px 0px 10px 0px; width:100%" itemscope="" itemtype="http://schema.org/CreativeWork" cellpadding="0" cellspacing="0">
+ <tbody><tr style="height: 58px;">
+ 
+ 
+ 
+ <td id="plogo">
+ <link itemprop="url" href="http://code.google.com/p/bitcoinj">
+ <a href="http://code.google.com/p/bitcoinj/">
+ 
+ 
+ <img src="GettingStarted%20-%20bitcoinj%20-%20An%20introduction%20to%20using%20the%20library%20-%20A%20Java%20implementation%20of%20a%20Bitcoin%20client-only%20node%20-%20Google%20Project%20Hosting_fichiers/logo.png" alt="Logo" itemprop="image">
+ 
+ </a>
+ </td>
+ 
+ <td style="padding-left: 0.5em">
+ 
+ <div id="pname">
+ <a href="http://code.google.com/p/bitcoinj/"><span itemprop="name">bitcoinj</span></a>
+ </div>
+ 
+ <div id="psum">
+ <a id="project_summary_link" href="http://code.google.com/p/bitcoinj/"><span itemprop="description">A Java implementation of a Bitcoin client-only node</span></a>
+ 
+ </div>
+ 
+ 
+ </td>
+ <td style="white-space:nowrap;text-align:right; vertical-align:bottom;">
+ 
+ <form action="/hosting/search">
+ <input size="30" name="q" type="text">
+ 
+ <input name="projectsearch" value="Search projects" type="submit">
+ </form>
+ 
+ </td></tr>
+ </tbody></table>
+
+</div>
+
+ 
+<div id="mt" class="gtb"> 
+ <a href="http://code.google.com/p/bitcoinj/" class="tab ">Project&nbsp;Home</a>
+ 
+ 
+ 
+ 
+ <a href="http://code.google.com/p/bitcoinj/downloads/list" class="tab ">Downloads</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="http://code.google.com/p/bitcoinj/w/list" class="tab active">Wiki</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="http://code.google.com/p/bitcoinj/issues/list" class="tab ">Issues</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="http://code.google.com/p/bitcoinj/source/checkout" class="tab ">Source</a>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <div class="gtbc"></div>
+</div>
+<table class="st" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+ <tbody><tr>
+ 
+ 
+ 
+ <td class="subt">
+ <div class="issueDetail">
+<div class="isf">
+ 
+ <span class="inIssueList"> 
+ <span>Search</span>
+ <form action="/p/bitcoinj/w/list" method="GET" style="display:inline">
+ <select id="can" name="can">
+ <option disabled="disabled">Search within:</option>
+ 
+ <option value="1">&nbsp;All wiki pages</option>
+ <option value="3">&nbsp;Featured pages</option>
+ <option value="2" selected="selected">&nbsp;Current pages</option>
+ 
+ 
+ <option value="5">&nbsp;My starred pages</option>
+ 
+ <option value="4">&nbsp;Deprecated pages</option>
+ 
+ </select>
+ <span>for</span>
+ <span id="qq"><input size="38" id="searchq" name="q" autocomplete="off" type="text"></span>
+ 
+ 
+ 
+ <input value="Search" type="submit">
+ </form>
+ </span>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+</div>
+</div>
+
+ </td>
+ 
+ 
+ 
+ 
+ 
+ 
+ <td class="bevel-right" align="right" valign="top"></td>
+ </tr>
+</tbody></table>
+
+
+<script type="text/javascript">
+ var cancelBubble = false;
+ function _go(url) { document.location = url; }
+</script>
+<div id="maincol">
+
+ 
+
+
+
+
+
+
+
+ <style type="text/css">
+ .delcom { background: #e8e8e8 }
+ .commentcontent {
+ margin: 2em;
+ padding: 0px 10px;
+ width: 66em;
+ }
+ .artifactcomment {
+ border-top: 3px solid #c3d9ff;
+ }
+ #commentform {
+ border-top: 3px solid #c3d9ff;
+ }
+ </style>
+
+<div id="wikipage">
+<table>
+ <tbody><tr>
+ 
+ 
+ <td style="vertical-align:top; padding-left:5px">
+ 
+ <div id="wikiheader">
+ 
+ <img id="star_img" src="GettingStarted%20-%20bitcoinj%20-%20An%20introduction%20to%20using%20the%20library%20-%20A%20Java%20implementation%20of%20a%20Bitcoin%20client-only%20node%20-%20Google%20Project%20Hosting_fichiers/star_off.gif" style="cursor:pointer" onclick="_CS_toggleStar(this,
+ {'scope': 'wiki',
+ 'user': '_CURRENT_USER',
+ 'item': 'bitcoinj:GettingStarted'
+ });" height="15" width="15">
+ 
+ <span style="font-size:120%;font-weight:bold">GettingStarted</span>
+ &nbsp;
+ <div> 
+ 
+ <i>An introduction to using the library</i>
+ 
+ 
+ <br>
+ 
+ <a class="label" style="padding-top: 2px" href="http://code.google.com/p/bitcoinj/w/list?q=label:Featured" title="Listed on project home page">Featured</a>, 
+ 
+ <a class="label" style="padding-top: 2px" href="http://code.google.com/p/bitcoinj/w/list?q=label:Phase-Deploy" title="How to install and configure the program">Phase-Deploy</a>
+ 
+ 
+ 
+ <div id="wikiauthor" style="float:right">
+ Updated <span title="Mon Apr  8 06:03:53 2013">
+ Apr 8, 2013</span>
+ 
+ by 
+
+ <a class="userlink" href="http://code.google.com/u/hearn@google.com/">hearn@google.com</a>
+ 
+ </div>
+ </div>
+ </div>
+ 
+ <div id="wikicontent">
+ <div class="vt" id="wikimaincol">
+ <p><i>This document describes the 0.8 release which may be different from the code in git master</i> </p><p>In
+ this document we will go through the PingService example app that comes
+ with the distribution. When run, PingService prints out an address and 
+starts listening on the network. Sending coins to that address will 
+result in them being sent back to you when the coins have a 
+confirmation. </p><p>You can read the full program here: </p><p><a href="https://code.google.com/p/bitcoinj/source/browse/examples/src/main/java/com/google/bitcoin/examples/PingService.java" rel="nofollow">https://code.google.com/p/bitcoinj/source/browse/examples/src/main/java/com/google/bitcoin/examples/PingService.java</a> </p><p></p><ul><li><a href="#Before_we_start">Before we start</a></li><li><a href="#Basic_structure">Basic structure</a></li><li><a href="#Network_Parameters">Network Parameters</a></li><li><a href="#Wallets_and_keys">Wallets and keys</a></li><li><a href="#Chains,_stores_and_checkpoints">Chains, stores and checkpoints</a></li><li><a href="#Network_connections_and_peers">Network connections and peers</a></li><li><a href="#Receiving_coins_and_handling_units">Receiving coins and handling units</a></li><li><a href="#Transaction_confidence">Transaction confidence</a></li><li><a href="#Learning_about_transactions">Learning about transactions</a></li><li><a href="#Saving_the_wallet_to_disk">Saving the wallet to disk</a></li><li><a href="#Sending_coins">Sending coins</a></li><li><a href="#Customizing_the_sending_process_and_setting_fees">Customizing the sending process and setting fees</a></li><li><a href="#Where_to_go_from_here?">Where to go from here?</a></li></ul> <p></p><h1><a name="Before_we_start"></a>Before we start<a href="#Before_we_start" class="section_anchor"></a></h1><p>bitcoinj
+ has logging and assertions built in. Assertions are always checked by 
+default regardless of whether the -ea flag is specified. Logging is 
+handled by the <a href="http://www.slf4j.org/" rel="nofollow">SLF4J</a> 
+library. It lets you choose which logging system you'd prefer to use, 
+eg, JDK logging, Android logging, etc. By default we use the simple 
+logger which prints most stuff of interest to stderr. You can pick a new
+ logger by switching out the jar file in the lib directory. </p><p>bitcoinj
+ uses Maven as its build system and is distributed via git. There are 
+source code/jar downloads you can use, but it's more secure to get it 
+directly from the source repository. </p><p>To get the code and install it, grab Maven from <a href="http://maven.apache.org/" rel="nofollow">the Maven website</a>,
+ and add it to your path. Also make sure you have git installed. 
+Probably your Java IDE has some Maven and Git integration too, but 
+having them available via the command line is still very useful. </p><p>Now get the latest version of the code. You can use the instructions on the <a href="http://code.google.com/p/bitcoinj/wiki/UsingMaven">UsingMaven</a>
+ page - just run the commands there and you'll get the right version of 
+the code (unless this website is itself compromised). This is intended 
+to protect against compromised mirrors or source downloads - because git
+ works using source tree hashes, if you get a source hash in the right 
+manner, you are guaranteed to end up with the right code. </p><h1><a name="Basic_structure"></a>Basic structure<a href="#Basic_structure" class="section_anchor"></a></h1><p>A bitcoinj application uses the following objects: </p><ul><li>a <tt>NetworkParameters</tt> instance which selects the network (production or test) you are on. </li><li>a <tt>Wallet</tt> instance to store your <tt>ECKey</tt>s and other data. </li><li>a <tt>PeerGroup</tt> instance to manage the network connections. </li><li>a <tt>BlockChain</tt> instance which manages the shared, global data structure which makes Bitcoin work. </li><li>a <tt>BlockStore</tt> instance which keeps the block chain data structure somewhere, like on disk. </li><li><tt>WalletEventListener</tt> implementations, which receive wallet events. </li></ul><p>Let's look at these one at a time. </p><h1><a name="Network_Parameters"></a>Network Parameters<a href="#Network_Parameters" class="section_anchor"></a></h1><p>Firstly, we select the network we're going to use based on an optional command line parameter: </p><pre class="prettyprint"><span class="kwd">boolean</span><span class="pln"> testNet </span><span class="pun">=</span><span class="pln"> args</span><span class="pun">.</span><span class="pln">length </span><span class="pun">&gt;</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="pun">&amp;&amp;</span><span class="pln"> args</span><span class="pun">[</span><span class="lit">0</span><span class="pun">].</span><span class="pln">equalsIgnoreCase</span><span class="pun">(</span><span class="str">"testnet"</span><span class="pun">);</span><span class="pln"><br></span><span class="kwd">final</span><span class="pln"> </span><span class="typ">NetworkParameters</span><span class="pln"> </span><span class="kwd">params</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> testNet </span><span class="pun">?</span><span class="pln"> </span><span class="typ">NetworkParameters</span><span class="pun">.</span><span class="pln">testNet</span><span class="pun">()</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">NetworkParameters</span><span class="pun">.</span><span class="pln">prodNet</span><span class="pun">();</span></pre><p>There
+ are two separate, independent Bitcoin networks. The main or 
+"production" network where people buy and sell things, and the test 
+network which is reset from time to time and exists for us to play about
+ with new features. Each network has its own genesis block, its own port
+ number and its own address prefix bytes to prevent you accidentally 
+trying to send coins across networks (which won't work). </p><p>It's 
+strongly recommended that you develop your software on the testnet. If 
+you accidentally lose test coins, it's no big deal as they are 
+valueless, and you can get lots of them for free from a <a href="http://tpfaucet.appspot.com/" rel="nofollow">TestNet Faucet</a>. Make sure to send the coins back to the faucet when you're done with them, so others can use them too. </p><p>All the data needed to connect to a network is held in a <tt>NetworkParameters</tt> singleton. You can get them easily, just use the static methods <tt>NetworkParameters.testNet()</tt> or <tt>NetworkParameters.prodNet()</tt>. </p><h1><a name="Wallets_and_keys"></a>Wallets and keys<a href="#Wallets_and_keys" class="section_anchor"></a></h1><p>Bitcoin
+ transactions occur between two keypairs. The sender creates a 
+transaction containing the address of the recipient, where the address 
+is an encoded form of a hash of their public key. The recipient then 
+signs a transaction claiming the coins with their own private key. A 
+keypair is represented with the <tt>ECKey</tt> class. Note that keys are independent of network parameters, but the encoding into textual address form is not. </p><pre class="prettyprint"><span class="com">// Creates a brand new keypair.</span><span class="pln"><br></span><span class="typ">ECKey</span><span class="pln"> key </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">ECKey</span><span class="pun">();</span><span class="pln"><br><br></span><span class="com">// Gets the raw public key bytes. You don't normally need this.</span><span class="pln"><br></span><span class="kwd">byte</span><span class="pun">[]</span><span class="pln"> publicKey </span><span class="pun">=</span><span class="pln"> key</span><span class="pun">.</span><span class="pln">getPubKey</span><span class="pun">();</span><span class="pln"><br><br></span><span class="com">// Gets the address corresponding to the public key.</span><span class="pln"><br></span><span class="typ">Address</span><span class="pln"> addr </span><span class="pun">=</span><span class="pln"> key</span><span class="pun">.</span><span class="pln">toAddress</span><span class="pun">(</span><span class="pln">networkParams</span><span class="pun">);</span><span class="pln"><br></span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">addr</span><span class="pun">.</span><span class="pln">toString</span><span class="pun">());</span><span class="pln"> &nbsp; </span><span class="com">// -&gt; &nbsp;1HwBZk111V4eEEC4BcN8fZd3RVifig2WjY</span></pre><p>ECKeys
+ can be created by providing only the private key, because public keys 
+are derivable from them in the elliptic curve scheme. You can also 
+create an <tt>Address</tt> from a key directly, but be sure that you use
+ the hash of the key bytes available via getPubKeyHash() rather than the
+ raw public key bytes (an assertion checks this). </p><p>A <tt>Wallet</tt>
+ is an object that stores keypairs and transactions relevant to those 
+keys. In order to send or receive coins, you need a wallet. </p><p>Newly
+ created Wallets contain no keys. Although the Wallet does support Java 
+serialization, the standard way to serialize them is using Google <a href="http://code.google.com/p/protobuf/" rel="nofollow">protocol buffers</a>.
+ Protocol buffers are a convenient data storage framework that is cross 
+platform, supported by many languages and uses a space efficient binary 
+format. </p><pre class="prettyprint"><span class="com">// Try to read the wallet from storage, create a new one if not possible.</span><span class="pln"><br></span><span class="typ">Wallet</span><span class="pln"> wallet</span><span class="pun">;</span><span class="pln"><br></span><span class="kwd">final</span><span class="pln"> </span><span class="typ">File</span><span class="pln"> walletFile </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">File</span><span class="pun">(</span><span class="str">"pingservice.wallet"</span><span class="pun">);</span><span class="pln"><br></span><span class="kwd">try</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; wallet </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Wallet</span><span class="pun">.</span><span class="pln">loadFromFile</span><span class="pun">(</span><span class="pln">walletFile</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"> </span><span class="kwd">catch</span><span class="pln"> </span><span class="pun">(</span><span class="typ">IOException</span><span class="pln"> e</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; wallet </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Wallet</span><span class="pun">(</span><span class="kwd">params</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; wallet</span><span class="pun">.</span><span class="pln">addKey</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">ECKey</span><span class="pun">());</span><span class="pln"><br>&nbsp; &nbsp; wallet</span><span class="pun">.</span><span class="pln">saveToFile</span><span class="pun">(</span><span class="pln">walletFile</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span><span class="com">// Fetch the first key in the wallet (should be the only key).</span><span class="pln"><br></span><span class="typ">ECKey</span><span class="pln"> key </span><span class="pun">=</span><span class="pln"> wallet</span><span class="pun">.</span><span class="pln">keychain</span><span class="pun">.</span><span class="kwd">get</span><span class="pun">(</span><span class="lit">0</span><span class="pun">);</span></pre><p>This code will use protocol buffer serialization. You can use the included <strong>WalletTool</strong>
+ command line utility to view saved wallets in either human readable 
+form, or a raw dump of the protocol buffer. The schema used to represent
+ the wallet is in the bitcoin.proto file in the source code. Extension 
+points are provided so you can store your own data in the wallet file as
+ well. </p><pre class="prettyprint"><span class="pln">cd tools<br></span><span class="pun">./</span><span class="pln">wallet</span><span class="pun">-</span><span class="pln">tool </span><span class="pun">--</span><span class="pln">wallet</span><span class="pun">=</span><span class="pln">pingservice</span><span class="pun">.</span><span class="pln">wallet </span><span class="pun">--</span><span class="pln">net</span><span class="pun">=</span><span class="pln">TEST </span><span class="pun">--</span><span class="pln">action</span><span class="pun">=</span><span class="pln">DUMP</span></pre><h1><a name="Chains,_stores_and_checkpoints"></a>Chains, stores and checkpoints<a href="#Chains,_stores_and_checkpoints" class="section_anchor"></a></h1><pre class="prettyprint"><span class="com">// Load the block chain, if there is one stored locally.</span><span class="pln"><br></span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Reading block store from disk"</span><span class="pun">);</span><span class="pln"><br></span><span class="typ">File</span><span class="pln"> file </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">File</span><span class="pun">(</span><span class="pln">filePrefix </span><span class="pun">+</span><span class="pln"> </span><span class="str">".spvchain"</span><span class="pun">);</span><span class="pln"><br></span><span class="kwd">boolean</span><span class="pln"> chainExistedAlready </span><span class="pun">=</span><span class="pln"> file</span><span class="pun">.</span><span class="pln">exists</span><span class="pun">();</span><span class="pln"><br>blockStore </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">SPVBlockStore</span><span class="pun">(</span><span class="kwd">params</span><span class="pun">,</span><span class="pln"> file</span><span class="pun">);</span><span class="pln"><br></span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(!</span><span class="pln">chainExistedAlready</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="typ">File</span><span class="pln"> checkpointsFile </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">File</span><span class="pun">(</span><span class="str">"checkpoints"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">checkpointsFile</span><span class="pun">.</span><span class="pln">exists</span><span class="pun">())</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">FileInputStream</span><span class="pln"> stream </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">FileInputStream</span><span class="pun">(</span><span class="pln">checkpointsFile</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">CheckpointManager</span><span class="pun">.</span><span class="pln">checkpoint</span><span class="pun">(</span><span class="kwd">params</span><span class="pun">,</span><span class="pln"> stream</span><span class="pun">,</span><span class="pln"> blockStore</span><span class="pun">,</span><span class="pln"> key</span><span class="pun">.</span><span class="pln">getCreationTimeSeconds</span><span class="pun">());</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br>chain </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">BlockChain</span><span class="pun">(</span><span class="kwd">params</span><span class="pun">,</span><span class="pln"> wallet</span><span class="pun">,</span><span class="pln"> blockStore</span><span class="pun">);</span></pre><p>The <i>block chain</i>
+ is the fundamental data structure in Bitcoin. It is a hard to forge 
+record of all economic transactions in the system, dating back to the 
+day of creation (the genesis block). A chain is a series of blocks and 
+each block is composed of a header along with a bunch of transactions. </p><p>In <i>simplified payment verification</i>
+ mode bitcoinj does not store all transactions ever performed, like the 
+reference implementation does. Instead it only stores the headers. 
+Whilst it downloads all transactions, after finding the ones relevant to
+ your wallet the rest are thrown away. In full mode the contents of 
+blocks are stored and verified too, using the embedded H2 database. The 
+block data (headers or headers+transactions) are inserted into a <tt>BlockStore</tt> of which there are several to choose from, depending on your desired performance characteristics: </p><ul><li>The simplest is the <tt>MemoryBlockStore</tt>, which simply stores headers in a HashMap. It's useful for unit tests or dealing with very small test chains.  </li><li>The next simplest is the <tt>DiskBlockStore</tt>.
+ It stores all the headers in memory too, but also saves them to disk. 
+When the store is created, all the headers are loaded off disk and into 
+memory. The advantage of this store is predictable, fast performance 
+once initialized. The downside is slow startup time, and memory usage 
+that grows as the Bitcoin system ages. This is how the reference 
+implementation works. </li><li>The next simplest is the <tt>SPVBlockStore</tt>.
+ This is designed to be usable in constrained environments like mobile 
+phones. No matter how many blocks there are, this store uses roughly the
+ same amount of memory and disk space. It implements a ring buffer 
+stored in a memory mapped file. Old block headers are overwritten by 
+newer headers. Enough headers are kept around to handle re-organization 
+events (where the best chain changes). </li><li>Finally, the most intensive is <tt>H2FullPrunedBlockStore</tt>. Unlike the others, this store is what you use for the experimental full verification support. </li></ul><p>Normally the <tt>SPVBlockStore</tt> is what you want. Whichever store you choose, you always need a either a <tt>BlockChain</tt> object (for SPV mode) or a <tt>FullPrunedBlockChain</tt> (for full mode) which are linked to a wallet. The <tt>BlockChain</tt> understands how to keep the wallet in sync with the state of the network. </p><p>The above code also uses one more feature, which is optional. If a file called "checkpoints" exists, it is loaded and then <tt>CheckpointManager</tt>
+ is used on the newly created block store. It's given a timestamp, which
+ is set to the creation time of the first key in the wallet (this 
+handles the case where you delete the chain file but not the wallet). 
+Checkpointing is only usable in SPV mode. It reduces the amount of time 
+needed to sync to the head of the chain by avoiding the need to download
+ headers from the <i>genesis block</i>, the first block ever created in 
+the Bitcoin system. Instead, the app only needs to download headers from
+ the checkpoint onwards. A checkpoint file is created by the <tt>BuildCheckpoints</tt>
+ program in the tools directory. It can be shipped with your app to let 
+you initialize block stores fast - very useful for end user facing 
+wallets. In the case of PingService it doesn't really matter, but is 
+shown here for completeness. </p><h1><a name="Network_connections_and_peers"></a>Network connections and peers<a href="#Network_connections_and_peers" class="section_anchor"></a></h1><pre class="prettyprint"><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Connecting ..."</span><span class="pun">);</span><span class="pln"><br>peerGroup </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">PeerGroup</span><span class="pun">(</span><span class="kwd">params</span><span class="pun">,</span><span class="pln"> chain</span><span class="pun">);</span><span class="pln"><br>peerGroup</span><span class="pun">.</span><span class="pln">setUserAgent</span><span class="pun">(</span><span class="str">"PingService"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"1.0"</span><span class="pun">);</span><span class="pln"><br>peerGroup</span><span class="pun">.</span><span class="pln">addPeerDiscovery</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">DnsDiscovery</span><span class="pun">(</span><span class="kwd">params</span><span class="pun">));</span><span class="pln"><br>peerGroup</span><span class="pun">.</span><span class="pln">addWallet</span><span class="pun">(</span><span class="pln">wallet</span><span class="pun">);</span></pre><p>To connect to remote nodes, you have several options in order of functionality: </p><ul><li>An object that implements the <tt>NetworkConnection</tt>
+ interface offers a raw message passing interface that accepts and 
+generates Java objects representing Bitcoin protocol messages. It 
+handles reading from/writing to a single remote Bitcoin node. There are 
+currently two subclasses, the <tt>TCPNetworkConnection</tt> and a <tt>MockNetworkConnection</tt> that's only useful for unit testing. In future there may be other transports, eg via HTTP, Bluetooth or NFC radios. </li><li>A <tt>Peer</tt> object wraps a <tt>NetworkConnection</tt>
+ and handles communication at a higher level. It understands how to do 
+things like download a block chain, request specific blocks and then 
+return the response, and so on. You can give it a <tt>BlockChain</tt> because the <tt>Peer</tt> can handle updating the chain object with data received from the remote node. A <tt>Peer</tt> can have attached event handlers that implement <tt>PeerEventListener</tt>. </li><li>A <tt>PeerGroup</tt> object handles connectivity to the peer-to-peer network in general. It handles setting up new <tt>Peer</tt>
+ objects, running background threads for each one, selecting a peer to 
+act as the "download peer" from which data will be retrieved, ensuring 
+there's always a sufficient number of peers and so on. </li></ul><p>You should almost always use a <tt>PeerGroup</tt> object for simplicity, even if you intend to only connect to one node (ie, one you run yourself). bitcoinj uses the <a href="https://netty.io/" rel="nofollow">Netty 3 framework</a>
+ to manage its network connections. Netty combines threads and 
+non-blocking IO to provide a robust and scalable networking subsystem, 
+but it can result in more complex code if you don't use <tt>PeerGroup</tt>, perhaps because you want to write an unusual app such as a network crawler. bitcoinj provides some helpers: look at the <tt>PrintPeers.java</tt> program in the examples directory to see how to use a raw <tt>TCPNetworkConnection</tt> object to send and receive messages on the wire. </p><p>All
+ of the objects discussed above expect to be told where to find peers. 
+That leads to the question of how you start up your connection to the 
+P2P network. The answer is you can use an object that implements the <tt>PeerDiscovery</tt>
+ interface. There are several implementations of this that use different
+ mechanisms, such as a well known IRC channel or DNS endpoints to find 
+addresses of peers. There are DNS seeds for both the production and test
+ networks, so we give the peer group one here. Currently, bitcoinj does 
+not build up its own database of peer addresses using the native "addr" 
+broadcast mechanism, so it'll use the peers found via discovery each 
+time. </p><p>The <tt>setUserAgent</tt> method can be called once per <tt>PeerGroup</tt>,
+ and it adds some information to Bitcoins equivalent of the User-Agent 
+HTTP header. The first parameter should be a short string identifying 
+your app - like its name. The second is an arbitrary string that should 
+contain something that looks like a version number, but it doesn't have 
+to be of any particular format.  </p><p>The <tt>addWallet</tt> method is
+ important for ensuring that pending transactions which did not get into
+ the chain yet are periodically rebroadcast, and to optimize the chain 
+download process. By adding a wallet to a <tt>PeerGroup</tt>, it will 
+notify newly connected nodes of any pending transactions in that wallet,
+ and transactions that are broadcast will be inserted into the wallet at
+ the right times. </p><p>Once you have a <tt>Peer</tt> or a <tt>PeerGroup</tt> you can start it up and then request a block chain download: </p><pre class="prettyprint"><span class="pln">peerGroup</span><span class="pun">.</span><span class="pln">startAndWait</span><span class="pun">();</span><span class="pln"><br>peerGroup</span><span class="pun">.</span><span class="pln">downloadBlockChain</span><span class="pun">();</span></pre><p>The <tt>startAndWait</tt> method comes from the Google Guava <a href="https://code.google.com/p/guava-libraries/wiki/ServiceExplained" rel="nofollow">Service</a> system. The <tt>PeerGroup</tt> can be started and stopped, which by default happens asynchronously. Using <tt>startAndWait</tt> instead of just <tt>start</tt> means your thread will pause until peer discovery is done and some connections are being brought up. </p><p>The <tt>downloadBlockChain</tt> method is simply a convenience method for the following code: </p><pre class="prettyprint"><span class="typ">DownloadListener</span><span class="pln"> listener </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">DownloadListener</span><span class="pun">();</span><span class="pln"><br>startBlockChainDownload</span><span class="pun">(</span><span class="pln">listener</span><span class="pun">);</span><span class="pln"><br></span><span class="kwd">try</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; listener</span><span class="pun">.</span><span class="pln">await</span><span class="pun">();</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"> </span><span class="kwd">catch</span><span class="pln"> </span><span class="pun">(</span><span class="typ">InterruptedException</span><span class="pln"> e</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">throw</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">RuntimeException</span><span class="pun">(</span><span class="pln">e</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span></pre><p>The <tt>DownloadListener</tt> class implements the <tt>PeerEventListener</tt>
+ class, which lets you find out about the progress of the chain 
+download. It tracks how much work has been done and how much is 
+remaining, and provides a couple of protected methods you can override 
+in order to implement your own user interface. The defaults just print 
+to stdout. </p><pre class="prettyprint"><span class="pln">&nbsp; &nbsp; </span><span class="com">/**<br>&nbsp; &nbsp; &nbsp;* Called when download progress is made.<br>&nbsp; &nbsp; &nbsp;*<br>&nbsp; &nbsp; &nbsp;* @param pct &nbsp;the percentage of chain downloaded, estimated<br>&nbsp; &nbsp; &nbsp;* @param date the date of the last block downloaded<br>&nbsp; &nbsp; &nbsp;*/</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">protected</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> progress</span><span class="pun">(</span><span class="kwd">double</span><span class="pln"> pct</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Date</span><span class="pln"> date</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="typ">String</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="str">"Chain download %d%% done, block date %s"</span><span class="pun">,</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">int</span><span class="pun">)</span><span class="pln"> pct</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">DateFormat</span><span class="pun">.</span><span class="pln">getDateTimeInstance</span><span class="pun">().</span><span class="pln">format</span><span class="pun">(</span><span class="pln">date</span><span class="pun">)));</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">/**<br>&nbsp; &nbsp; &nbsp;* Called when download is initiated.<br>&nbsp; &nbsp; &nbsp;*<br>&nbsp; &nbsp; &nbsp;* @param blocks the number of blocks to download, estimated<br>&nbsp; &nbsp; &nbsp;*/</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">protected</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> startDownload</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> blocks</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Downloading block chain of size "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> blocks </span><span class="pun">+</span><span class="pln"> </span><span class="str">". "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">(</span><span class="pln">blocks </span><span class="pun">&gt;</span><span class="pln"> </span><span class="lit">1000</span><span class="pln"> </span><span class="pun">?</span><span class="pln"> </span><span class="str">"This may take a while."</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="str">""</span><span class="pun">));</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; &nbsp; </span><span class="com">/**<br>&nbsp; &nbsp; &nbsp;* Called when we are done downloading the block chain.<br>&nbsp; &nbsp; &nbsp;*/</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">protected</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> doneDownload</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Done downloading block chain"</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span></pre><h1><a name="Receiving_coins_and_handling_units"></a>Receiving coins and handling units<a href="#Receiving_coins_and_handling_units" class="section_anchor"></a></h1><p>For most apps, you will want to know when you have received coins: </p><pre class="prettyprint"><span class="com">// We want to know when the balance changes.</span><span class="pln"><br>wallet</span><span class="pun">.</span><span class="pln">addEventListener</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">AbstractWalletEventListener</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> onCoinsReceived</span><span class="pun">(</span><span class="typ">Wallet</span><span class="pln"> w</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Transaction</span><span class="pln"> tx</span><span class="pun">,</span><span class="pln"> </span><span class="typ">BigInteger</span><span class="pln"> prevBalance</span><span class="pun">,</span><span class="pln"> </span><span class="typ">BigInteger</span><span class="pln"> newBalance</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// Running on a peer thread.</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br></span><span class="pun">}</span></pre><p>An
+ event listener is an object implementing the given interface. The Peer 
+object runs its own thread, which will call your methods when one of the
+ addresses in the wallet receives coins. Note that event listeners must 
+be thread safe - bitcoinj will happily invoke your event listeners 
+multiple times in parallel. A simple way to make your listener thread 
+safe is to just mark its methods as synchronized. </p><p>Monetary values
+ in bitcoinj are represented in "microcents" using Java BigIntegers. A 
+single Bitcoin is 100,000,000 microcents. Unfortunately, in some parts 
+of the code you may see microcents referred to as "nanocoins" - this is 
+likely to change in future, along with replacing BigIntegers with 
+something else. Microcents are the smallest amount representable in the 
+Bitcoin protocol. To get a value to and from standard, human readable 
+units, you can use a method in the Utils class: </p><pre class="prettyprint"><span class="typ">BigInteger</span><span class="pln"> value </span><span class="pun">=</span><span class="pln"> tx</span><span class="pun">.</span><span class="pln">getValueSentToMe</span><span class="pun">(</span><span class="pln">w</span><span class="pun">);</span><span class="pln"><br></span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Received "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="typ">Utils</span><span class="pun">.</span><span class="pln">bitcoinValueToFriendlyString</span><span class="pun">(</span><span class="pln">value</span><span class="pun">)</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="str">" from "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="kwd">from</span><span class="pun">.</span><span class="pln">toString</span><span class="pun">());</span></pre><p>But that will come a bit later.  </p><h1><a name="Transaction_confidence"></a>Transaction confidence<a href="#Transaction_confidence" class="section_anchor"></a></h1><p>On receiving some coins, we do the following: </p><pre class="prettyprint"><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> onCoinsReceived</span><span class="pun">(</span><span class="typ">Wallet</span><span class="pln"> w</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Transaction</span><span class="pln"> tx</span><span class="pun">,</span><span class="pln"> </span><span class="typ">BigInteger</span><span class="pln"> prevBalance</span><span class="pun">,</span><span class="pln"> </span><span class="typ">BigInteger</span><span class="pln"> newBalance</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; </span><span class="com">// MUST BE THREAD SAFE</span><span class="pln"><br>&nbsp; </span><span class="kwd">assert</span><span class="pln"> </span><span class="pun">!</span><span class="pln">newBalance</span><span class="pun">.</span><span class="pln">equals</span><span class="pun">(</span><span class="typ">BigInteger</span><span class="pun">.</span><span class="pln">ZERO</span><span class="pun">);</span><span class="pln"><br>&nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(!</span><span class="pln">tx</span><span class="pun">.</span><span class="pln">isPending</span><span class="pun">())</span><span class="pln"> </span><span class="kwd">return</span><span class="pun">;</span><span class="pln"><br>&nbsp; </span><span class="com">// It was broadcast, but we can't really verify it's valid until it appears in a block.</span><span class="pln"><br>&nbsp; </span><span class="typ">BigInteger</span><span class="pln"> value </span><span class="pun">=</span><span class="pln"> tx</span><span class="pun">.</span><span class="pln">getValueSentToMe</span><span class="pun">(</span><span class="pln">w</span><span class="pun">);</span><span class="pln"><br>&nbsp; </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Received pending tx for "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="typ">Utils</span><span class="pun">.</span><span class="pln">bitcoinValueToFriendlyString</span><span class="pun">(</span><span class="pln">value</span><span class="pun">)</span><span class="pln"> </span><span class="pun">+</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str">": "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> tx</span><span class="pun">);</span><span class="pln"><br>&nbsp; tx</span><span class="pun">.</span><span class="pln">getConfidence</span><span class="pun">().</span><span class="pln">addEventListener</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">TransactionConfidence</span><span class="pun">.</span><span class="typ">Listener</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> onConfidenceChanged</span><span class="pun">(</span><span class="kwd">final</span><span class="pln"> </span><span class="typ">Transaction</span><span class="pln"> tx2</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="com">// MUST BE THREAD SAFE.</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">tx2</span><span class="pun">.</span><span class="pln">getConfidence</span><span class="pun">().</span><span class="pln">getConfidenceType</span><span class="pun">()</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="typ">TransactionConfidence</span><span class="pun">.</span><span class="typ">ConfidenceType</span><span class="pun">.</span><span class="pln">BUILDING</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// Coins were confirmed (appeared in a block).</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; tx2</span><span class="pun">.</span><span class="pln">getConfidence</span><span class="pun">().</span><span class="pln">removeEventListener</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// Run the process of sending the coins back on a separate thread. This is a temp hack</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// until the threading changes in 0.9 are completed ... TX confidence listeners run</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// with the wallet lock held and re-entering the wallet isn't always safe. We can solve</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// this by just interacting with the wallet from a separate thread, which will wait until</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// this thread is finished. It's a dumb API requirement and will go away soon.</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Thread</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="lit">@Override</span><span class="pln"> </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> run</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; bounceCoins</span><span class="pun">(</span><span class="pln">wallet</span><span class="pun">,</span><span class="pln"> tx2</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}.</span><span class="pln">start</span><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="typ">String</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="str">"Confidence of %s changed, is now: %s"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tx2</span><span class="pun">.</span><span class="pln">getHashAsString</span><span class="pun">(),</span><span class="pln"> tx2</span><span class="pun">.</span><span class="pln">getConfidence</span><span class="pun">().</span><span class="pln">toString</span><span class="pun">()));</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; </span><span class="pun">});</span><span class="pln"><br></span><span class="pun">}</span></pre><p>Firstly,
+ we check if the transaction is pending. It's possible that the user 
+deleted the chain file and then re-ran the PingService app, if that 
+happens then the data will be downloaded again and - from the apps 
+perspective - we will re-receive the same coins. But we must not try to 
+send them back again because they were already sent back some time 
+before, we would create a double spend. To solve this, we ignore 
+transactions that appear in a block without us first seeing the 
+broadcast. It's not perfect or race free, but it's good enough for an 
+example app. </p><p>Once we decided the transaction is pending/unconfirmed, we add a <i>confidence listener</i>. This callback will be invoked when our confidence in the transaction changes. <i>Confidence</i>
+ is an important concept in bitcoinj - it is a measurement of how likely
+ it is that a transaction will be reversed. Unfortunately it is not a 
+precise or simple thing to measure this risk, but in this app we 
+approximate by saying that when a transaction has appeared in one block,
+ it's good enough to be sent back. We only want to bounce coins back if 
+they are confirmed, because in SPV mode the only evidence we have that a
+ transaction is valid is the fact that we received it from trustworthy 
+nodes. In this case it wouldn't actually matter if the transaction was 
+invalid because we spend it right back to the sender, so an invalid 
+received transaction would just result in an invalid sent transaction. 
+But most applications don't work like that. </p><p>When the confidence 
+type has changed to BUILDING, indicating that the transaction was 
+included into the chain and our confidence in it is increasing with work
+ done, we run the <tt>bounceCoins</tt> method defined further down in PingService to send the coins back. </p><p>Note here that we run <tt>bounceCoins()</tt>
+ in a separate thread. This shouldn't really be necessary in a well 
+designed API, but unfortunately in bitcoinj 0.8 confidence listeners 
+specifically can sometimes be run in conditions where re-entering the 
+wallet from the safe thread is not safe. This API quirk will be 
+addressed in the next release. Other kinds of listeners don't have that 
+problem - they always run at the end of mutating operations where 
+reentrancy is safe, and without any library internal locks held. </p><h1><a name="Learning_about_transactions"></a>Learning about transactions<a href="#Learning_about_transactions" class="section_anchor"></a></h1><p>Let's look at <tt>bounceCoins()</tt>. When we receive coins, it can be useful to know something about that transaction. </p><pre class="prettyprint"><span class="typ">TransactionInput</span><span class="pln"> input </span><span class="pun">=</span><span class="pln"> tx</span><span class="pun">.</span><span class="pln">getInputs</span><span class="pun">().</span><span class="kwd">get</span><span class="pun">(</span><span class="lit">0</span><span class="pun">);</span><span class="pln"><br></span><span class="typ">Address</span><span class="pln"> </span><span class="kwd">from</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> input</span><span class="pun">.</span><span class="pln">getFromAddress</span><span class="pun">();</span><span class="pln"><br></span><span class="typ">BigInteger</span><span class="pln"> value </span><span class="pun">=</span><span class="pln"> tx</span><span class="pun">.</span><span class="pln">getValueSentToMe</span><span class="pun">(</span><span class="pln">w</span><span class="pun">);</span></pre><p>Here,
+ we obtain the first input of the transaction and pretend that this is 
+the address the transaction is from. Note that this is done only for the
+ purposes of the demo app. Real Bitcoin transactions can aggregate value
+ from multiple different addresses so the concept of "from-ness" doesn't
+ have much meaning. Even worse, people who use shared wallets such as 
+sending money directly from an exchange may have a "from address" that 
+isn't even controlled by them - so don't send a PingService money from 
+Mt Gox! Here we arbitrarily pick the first input address, purely to keep
+ the demo simple. </p><p>An <tt>Address</tt> object represents a Bitcoin
+ address. It knows how to parse and print itself in base58 form, for 
+example: 15HDi7qZbWnuA7SjMKp12WfrEgkUXA511p. It can also provide the raw
+ hash160 bytes should you need them. </p><h1><a name="Saving_the_wallet_to_disk"></a>Saving the wallet to disk<a href="#Saving_the_wallet_to_disk" class="section_anchor"></a></h1><p>Once
+ you've received some coins, you should save the wallet to disk. If you 
+don't, your wallet can end up out of sync with the stored block chain, 
+meaning the coins won't be there next time you start your app. 
+WalletTool can be used to fix this. </p><p>You can save a wallet to disk at any time using <tt>wallet.saveToFile()</tt> or <tt>wallet.saveToFileStream()</tt>.
+ It's better to use the first one if you can, as the wallet will be 
+saved to a temporary file and then renamed over the previous one 
+resulting in a safer atomic replace. However, doing things manually has a
+ few problems. It can be hard to know when the best time to save the 
+wallet is. If you don't save often enough and your app quits 
+unexpectedly, the wallet can get out of sync with the chain so the user 
+can see the wallet "going backwards in time", which although it doesn't 
+result in any loss of money can be distressing for the user. Of course, 
+you must always save the wallet after adding new keys!  </p><p>But 
+saving the wallet too often can result in performance problems. 
+Typically this surfaces whilst catching up with the block chain because 
+the act of receiving a new block changes the confidence of every 
+transaction in that wallet. </p><p>To mitigate this problem, bitcoinj provides an auto save mechanism. By using <tt>Wallet.autoSaveToFile()</tt>
+ a background thread will be started that saves the wallet 
+asynchronously after a short delay. Even if the wallet changes multiple 
+times during the delay period, it will only be written to disk once. 
+There is one exception - adding a key on an auto-saved wallet always 
+results in an immediate blocking write to disk on the current thread. If
+ you want to add keys from a UI thread on Android, be aware this may 
+trigger strict mode warnings. You can do it on a separate thread to fix 
+this. </p><h1><a name="Sending_coins"></a>Sending coins<a href="#Sending_coins" class="section_anchor"></a></h1><p>The final part of the PingService is sending the coins we just received. </p><pre class="prettyprint"><span class="com">// Now send the coins back!</span><span class="pln"><br></span><span class="typ">Wallet</span><span class="pun">.</span><span class="typ">SendResult</span><span class="pln"> sendResult </span><span class="pun">=</span><span class="pln"> w</span><span class="pun">.</span><span class="pln">sendCoins</span><span class="pun">(</span><span class="pln">peerGroup</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">from</span><span class="pun">,</span><span class="pln"> value</span><span class="pun">);</span><span class="pln"><br>checkNotNull</span><span class="pun">(</span><span class="pln">sendResult</span><span class="pun">);</span><span class="pln"> &nbsp;</span><span class="com">// We should never try to send more coins than we have!</span><span class="pln"><br></span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Sent coins back! Transaction hash is "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> sendResult</span><span class="pun">.</span><span class="pln">tx</span><span class="pun">.</span><span class="pln">getHashAsString</span><span class="pun">());</span></pre><p>To send coins, we use the wallets <tt>sendCoins</tt>
+ method. It takes three arguments: the peer, the address to send coins 
+to (here we use the 'from' address we chose earlier) and how much money 
+to send. </p><p><tt>sendCoins</tt> returns a <tt>SendResult</tt> object containing both the transaction that was created, and a <tt>ListenableFuture</tt> that can be used to find out when the network has accepted the payment. </p><p>If the wallet doesn't contain enough money, the <tt>sendCoins</tt> method will return null, though in future versions this is likely to become an exception. </p><p>Note
+ that currently bitcoinj does not automatically calculate transaction 
+fees. By default it always generates free transactions. This means it's 
+possible to create transactions that will take a long time to confirm or
+ may never confirm. Don't use bitcoinj for moving large amounts of value
+ around on the production network unless you know what you're doing in 
+this regard! </p><h1><a name="Customizing_the_sending_process_and_setting_fees"></a>Customizing the sending process and setting fees<a href="#Customizing_the_sending_process_and_setting_fees" class="section_anchor"></a></h1><p>Transactions
+ in Bitcoin can have fees attached. This is useful as an 
+anti-denial-of-service mechanism, but it's primarily intended to 
+incentivise mining in later years of the system when inflation has 
+dropped off. You can control the fee attached to a transaction by 
+customizing the send: </p><pre class="prettyprint"><span class="typ">Wallet</span><span class="pun">.</span><span class="typ">SendRequest</span><span class="pln"> req </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Wallet</span><span class="pun">.</span><span class="typ">SendRequest</span><span class="pun">.</span><span class="pln">to</span><span class="pun">(</span><span class="pln">address</span><span class="pun">,</span><span class="pln"> value</span><span class="pun">);</span><span class="pln"><br>req</span><span class="pun">.</span><span class="pln">fee </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Utils</span><span class="pun">.</span><span class="pln">toNanoCoins</span><span class="pun">(</span><span class="str">"0.0005"</span><span class="pun">);</span><span class="pln"><br></span><span class="typ">Wallet</span><span class="pun">.</span><span class="typ">SendResult</span><span class="pln"> result </span><span class="pun">=</span><span class="pln"> wallet</span><span class="pun">.</span><span class="pln">sendCoins</span><span class="pun">(</span><span class="pln">peerGroup</span><span class="pun">,</span><span class="pln"> req</span><span class="pun">);</span><span class="pln"><br></span><span class="typ">Transaction</span><span class="pln"> createdTx </span><span class="pun">=</span><span class="pln"> result</span><span class="pun">.</span><span class="pln">tx</span><span class="pun">;</span></pre><h1><a name="Where_to_go_from_here?"></a>Where to go from here?<a href="#Where_to_go_from_here?" class="section_anchor"></a></h1><p>There
+ are many other features in bitcoinj that this tutorial does not cover. 
+You can read the other articles to learn more about full verification, 
+wallet encryption and so on, and of course the JavaDocs detail the full 
+API. </p>
+ </div>
+ </div>
+ </td></tr><tr>
+</tr></tbody></table>
+ </div>
+
+
+ 
+ 
+ 
+ 
+ 
+ <div id="commentform">
+ <form action="../w/detail.do" method="post">
+ <table>
+ <tbody><tr><td class="vt">
+ <input name="pagename" value="GettingStarted" type="hidden">
+ <input name="token" value="wpwl0FbZUbkms2iuoCxojBPRgOU:1366401035364" type="hidden">
+ <div class="graytext" style="float: right;">
+ Hint: You can use <a href="http://code.google.com/p/support/wiki/WikiSyntax">Wiki Syntax.</a>
+ </div>
+ <div>Enter a comment:</div>
+ <textarea name="content" rows="6" cols="100"></textarea><br><br>
+ <input name="submit" value="Submit" type="submit">
+ </td>
+ </tr></tbody></table>
+ </form>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ <form name="delcom" action="../w/delComment.do" method="POST">
+ <input name="sequence_num" value="" type="hidden">
+ <input name="create_time" value="" type="hidden">
+ <input name="mode" value="" type="hidden">
+ <input name="pagename" value="GettingStarted" type="hidden">
+ <input name="token" value="wpwl0FbZUbkms2iuoCxojBPRgOU:1366401035364" type="hidden">
+ </form>
+
+
+ <script src="GettingStarted%20-%20bitcoinj%20-%20An%20introduction%20to%20using%20the%20library%20-%20A%20Java%20implementation%20of%20a%20Bitcoin%20client-only%20node%20-%20Google%20Project%20Hosting_fichiers/prettify.js"></script>
+ <script type="text/javascript">
+ prettyPrint();
+ </script>
+
+<script type="text/javascript" src="GettingStarted%20-%20bitcoinj%20-%20An%20introduction%20to%20using%20the%20library%20-%20A%20Java%20implementation%20of%20a%20Bitcoin%20client-only%20node%20-%20Google%20Project%20Hosting_fichiers/dit_scripts.js"></script>
+
+
+
+  
+ 
+ 
+ <script type="text/javascript" src="GettingStarted%20-%20bitcoinj%20-%20An%20introduction%20to%20using%20the%20library%20-%20A%20Java%20implementation%20of%20a%20Bitcoin%20client-only%20node%20-%20Google%20Project%20Hosting_fichiers/ph_core.js"></script>
+ 
+ <script type="text/javascript" src="GettingStarted%20-%20bitcoinj%20-%20An%20introduction%20to%20using%20the%20library%20-%20A%20Java%20implementation%20of%20a%20Bitcoin%20client-only%20node%20-%20Google%20Project%20Hosting_fichiers/ph_dwiki.js"></script>
+ 
+ 
+ 
+ 
+</div> 
+
+<div id="footer" dir="ltr">
+ <div class="text">
+ <a href="http://code.google.com/projecthosting/terms.html">Terms</a> -
+ <a href="http://www.google.com/privacy.html">Privacy</a> -
+ <a href="http://code.google.com/p/support/">Project Hosting Help</a>
+ </div>
+</div>
+ <div class="hostedBy" style="margin-top: -20px;">
+ <span style="vertical-align: top;">Powered by <a href="http://code.google.com/projecthosting/">Google Project Hosting</a></span>
+ </div>
+
+ 
+ 
+
+
+ 
+ 
+
+
+
+<div style="display: none;" id="menuDiv-projects-dropdown" class="menuDiv instance0"><div class="menuCategory default"></div><b style="display: block;" class="categoryTitle projects">Projects</b><div class="menuCategory projects"><a href="http://code.google.com/p/ofx3nity/" style="display: block;" class="menuItem">ofx3nity</a><a href="http://code.google.com/p/tuism/" style="display: block;" class="menuItem">tuism</a></div><b style="display: block;" class="categoryTitle starred_projects">Starred projects</b><div class="menuCategory starred_projects"><a href="http://code.google.com/p/cadmos/" style="display: block;" class="menuItem">cadmos</a><a href="http://code.google.com/p/emf-gwt-bridge/" style="display: block;" class="menuItem">emf-gwt-bridge</a><a href="http://code.google.com/p/fritzing/" style="display: block;" class="menuItem">fritzing</a><a href="http://code.google.com/p/qtwidgetsinswt/" style="display: block;" class="menuItem">qtwidgetsinswt</a><a href="http://code.google.com/p/serterm/" style="display: block;" class="menuItem">serterm</a><a href="http://code.google.com/p/swt-xy-graph/" style="display: block;" class="menuItem">swt-xy-graph</a></div><div class="menuCategory controls"><hr class="menuSeparator"><a href="http://code.google.com/hosting/" style="display: block;" class="menuItem">Find open source projects...</a><a href="http://code.google.com/hosting/createProject" style="display: block;" class="menuItem">Create a project...</a></div></div></body></html>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://mtgox/1.0"
+            class="net.sf.smbt.btc.mtgox.MtgoxPackage"
+            genModel="model/mtgox.genmodel"/>
+   </extension>
+
+
+	<extension
+	      point="net.sf.xqz.engine.cmdInterpreter">
+	   <cmdInterpreter
+	         ID="net.sf.smbt.mtgox.cmdInterpreter" 
+	         interpreter="net.sf.smbt.btc.mtgox.cmd.MTGoxCmdInterpreter"
+	         
+	         >
+	   </cmdInterpreter>
+	</extension>
+	
+	<extension
+	      point="net.sf.xqz.engine.frameInterpreter">
+	   <frameInterpreter
+	         ID="net.sf.smbt.mtgox.frameInterpreter" 
+	         interpreter="net.sf.smbt.btc.mtgox.cmd.MTGoxFrameInterpreter"
+	         
+	         >
+	   </frameInterpreter>
+	</extension>
+
+<extension
+      point="net.sf.xqz.engine.cmdHandler">
+   <cmdHandler
+         ID="net.sf.smbt.mtgox.evtHandler"
+         handler="net.sf.smbt.btc.mtgox.cmd.MTGoxQxEventHandler"
+         
+         >
+   </cmdHandler>
+</extension>
+	
+	<extension
+	      point="net.sf.smbt.comm.topology.protocol">
+	   <engine
+          ID="net.sf.smbt.mtgox.engine"
+          alias="mtgox-v2"
+          cmdInterpreterID="net.sf.smbt.mtgox.cmdInterpreter"
+          desc="MTGox Protocol V2 REST"
+          eventHandler="net.sf.smbt.mtgox.evtHandler"
+          frameInterpreter="net.sf.smbt.mtgox.frameInterpreter"
+          instance="0"
+          transports="HTTP"
+          customHTTP="net.sf.smbt.btc.mtgox.cmd.HttpCommunicatorReactor"
+       >
+	   </engine>
+	</extension>
+	
+	<extension
+	      point="net.sf.smbt.comm.topology.protocol">
+	   <engine
+          ID="net.sf.smbt.mtgox.engine.websocket"
+          alias="mtgox-wsocket"
+          cmdInterpreterID="net.sf.smbt.mtgox.cmdInterpreter"
+          desc="MTGox Protocol V2 WebSocket"
+          eventHandler="net.sf.smbt.mtgox.evtHandler"
+          frameInterpreter="net.sf.smbt.mtgox.frameInterpreter"
+          instance="0"
+          transports="HTTP"
+          customHTTP="net.sf.smbt.btc.mtgox.cmd.HttpCommunicatorReactor"
+       >
+	   </engine>
+	</extension>
+
+</plugin>
+

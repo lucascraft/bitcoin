@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ubiquisense - Wiimote Communication
+Bundle-SymbolicName: net.sf.smbt.bt.wiimote;singleton:=true
+Bundle-Version: 0.5.0.qualifier
+Bundle-Activator: net.sf.smbt.bt.wiimote.Activator
+Require-Bundle: org.eclipse.core.runtime,
+ net.sf.smbt.comm.bluetooth;bundle-version="0.5.0",
+ net.sf.xqz.engine;bundle-version="0.5.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ClassPath: .
+Export-Package: net.sf.smbt.bt.wiimote,
+ net.sf.smbt.bt.wiimote.extensions,
+ net.sf.smbt.bt.wiimote.handlers,
+ net.sf.smbt.bt.wiimote.services,
+ net.sf.smbt.bt.wiimote.utils,
+ net.sf.smbt.ezwiimote,
+ net.sf.smbt.ezwiimote.impl,
+ net.sf.smbt.ezwiimote.util
+Bundle-Vendor: ubiquisense.com
