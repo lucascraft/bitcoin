@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="wiiExtension" name="Wii Device Extension" schema="schema/wiiExtension.exsd"/>
+
+
+   <extension
+         point="net.sf.smbt.comm.topology.protocol">
+      <engine
+      		alias="wiimote"
+            ID="net.sf.smbt.wiimote"
+            cmdInterpreterID="net.sf.smbt.wiimote.cmdInterpreter"
+            eventHandler="net.sf.smbt.wiimote.cmdEventHandler"
+            frameInterpreter="net.sf.smbt.wiimote.frameInterpreter"
+            instance="0"
+            transports="BT"
+      		desc="Protocol handling Wii device packets as received from a Bluetooth connection to a Wiimote"      
+      >
+      </engine>
+   </extension>
+   
+   <extension
+         point="net.sf.xqz.engine.cmdHandler">
+      <cmdHandler
+            ID="net.sf.smbt.wiimote.cmdEventHandler"
+            handler="net.sf.smbt.bt.wiimote.handlers.BTWiimoteEventHandler">
+      </cmdHandler>
+   </extension>
+   
+   <extension
+         point="net.sf.xqz.engine.cmdInterpreter">
+      <cmdInterpreter
+            ID="net.sf.smbt.wiimote.cmdInterpreter"
+            interpreter="net.sf.smbt.bt.wiimote.handlers.BTWiimoteCmdHandler">
+      </cmdInterpreter>
+   </extension>
+   
+   <extension
+         point="net.sf.xqz.engine.frameInterpreter">
+      <frameInterpreter
+            ID="net.sf.smbt.wiimote.frameInterpreter"
+            interpreter="net.sf.smbt.bt.wiimote.handlers.BTWiimoteFrameHandler">
+      </frameInterpreter>
+   </extension>
+   
+   <!--
+   	
+   		Waiting for decrypted/encrypted identifcation key solution
+   		 
+   <extension
+         point="net.sf.smbt.bt.wiimote.wiiExtension">
+      <wiiExtension
+            ID="net.sf.smbt.bt.wiimote.wiiMotionPlus"
+            key=""
+            wiiExtHandler="net.sf.smbt.bt.wiimote.extensions.WiiMotionPlusExtension">
+      </wiiExtension>
+   </extension>
+   
+   -->
+   
+   
+   <extension
+         point="net.sf.smbt.bt.wiimote.wiiExtension">
+      <wiiExtension
+            ID="net.sf.smbt.bt.wiimote.wiiNunchuk"
+            key="fefe"
+            wiiExtHandler="net.sf.smbt.bt.wiimote.extensions.NunchukExtension">
+      </wiiExtension>
+   </extension>
+   <extension
+         point="net.sf.smbt.bt.wiimote.wiiExtension">
+      <wiiExtension
+            ID="net.sf.smbt.bt.wiimote.classicWiimote"
+            key="fdfd"
+            wiiExtHandler="net.sf.smbt.bt.wiimote.extensions.ClassicWiimoteExtension">
+      </wiiExtension>
+   </extension>
+
+</plugin>

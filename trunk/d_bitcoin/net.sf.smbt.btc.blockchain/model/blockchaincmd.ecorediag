@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_6CCNAFHYEeOfjIO1XYHQHA" type="EcoreTools" name="blockchaincmd" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_60Oe8FHYEeOfjIO1XYHQHA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_60PGAFHYEeOfjIO1XYHQHA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_60PGAVHYEeOfjIO1XYHQHA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_B1F5oFHZEeOfjIO1XYHQHA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="blockchaincmd.ecore#//BlockchainCmd/jsonRcv"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_B1F5oVHZEeOfjIO1XYHQHA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_Cm6YIFHZEeOfjIO1XYHQHA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="blockchaincmd.ecore#//BlockchainCmd/jsonSnd"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Cm6YIVHZEeOfjIO1XYHQHA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_60PGAlHYEeOfjIO1XYHQHA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_60PGA1HYEeOfjIO1XYHQHA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_60PGBFHYEeOfjIO1XYHQHA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_60PtEFHYEeOfjIO1XYHQHA" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_60PtEVHYEeOfjIO1XYHQHA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_60PtElHYEeOfjIO1XYHQHA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_60PtE1HYEeOfjIO1XYHQHA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_60Oe8VHYEeOfjIO1XYHQHA" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="blockchaincmd.ecore#//BlockchainCmd"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_60Oe8lHYEeOfjIO1XYHQHA" x="280" y="228"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="__VwwcFHYEeOfjIO1XYHQHA" type="1001">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__WE5gFHYEeOfjIO1XYHQHA" source="Shortcut">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__WE5gVHYEeOfjIO1XYHQHA" key="modelID" value="EcoreTools"/>
+    </eAnnotations>
+    <children xmi:type="notation:Node" xmi:id="__VxXgFHYEeOfjIO1XYHQHA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="__Vx-kFHYEeOfjIO1XYHQHA" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="__Vx-kVHYEeOfjIO1XYHQHA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="__Vx-klHYEeOfjIO1XYHQHA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="__Vx-k1HYEeOfjIO1XYHQHA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="__Vx-lFHYEeOfjIO1XYHQHA" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="__Vx-lVHYEeOfjIO1XYHQHA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="__Vx-llHYEeOfjIO1XYHQHA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="__Vx-l1HYEeOfjIO1XYHQHA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="__VwwcVHYEeOfjIO1XYHQHA" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="platform:/resource/net.sf.smbt.comm.http/model/httpcmd.ecore#//HttpCommCmd"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="__VwwclHYEeOfjIO1XYHQHA" x="268" y="73"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_6CCNAVHYEeOfjIO1XYHQHA"/>
+  <element xmi:type="ecore:EPackage" href="blockchaincmd.ecore#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_AT3XcFHZEeOfjIO1XYHQHA" type="3003" source="_60Oe8FHYEeOfjIO1XYHQHA" target="__VwwcFHYEeOfjIO1XYHQHA">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_AT3XcVHZEeOfjIO1XYHQHA" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_AT3XclHZEeOfjIO1XYHQHA" fontName="Lucida Grande"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_AT3Xc1HZEeOfjIO1XYHQHA" points="[9, -20, -46, 110]$[55, -92, 0, 38]"/>
+  </edges>
+</notation:Diagram>

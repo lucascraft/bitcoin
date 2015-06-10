@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://bitcoind/1.0"
+            class="net.sf.smbt.btc.node.bitcoind.BitcoindPackage"
+            genModel="model/bitcoind.genmodel"/>
+   </extension>
+   <extension
+         point="net.sf.xqz.engine.cmdHandler">
+      <cmdHandler
+            ID="net.sf.smbt.btc.node.cmdHandler"
+            handler="net.sf.smbt.btc.node.BitcoinRpcQxEventHandler">
+      </cmdHandler>
+   </extension>
+   <extension
+         point="net.sf.xqz.engine.frameInterpreter">
+      <frameInterpreter
+            ID="net.sf.smbt.btc.node.frameInterpreter"
+            interpreter="net.sf.smbt.btc.node.BitcoinRpcFrameInterpreter">
+      </frameInterpreter>
+   </extension>
+   <extension
+         point="net.sf.xqz.engine.cmdInterpreter">
+      <cmdInterpreter
+            ID="net.sf.smbt.btc.node.cmdInterpreter"
+            interpreter="net.sf.smbt.btc.node.BitcoinRpcCmdInterpreter">
+      </cmdInterpreter>
+   </extension>
+   <extension
+         point="net.sf.smbt.comm.topology.protocol">
+      <engine
+            ID="net.sf.smbt.btc.node.engine"
+            alias="bitcoind"
+            cmdInterpreterID="net.sf.smbt.btc.node.cmdInterpreter"
+            customHTTP="net.sf.smbt.btc.node.BitcoinDProcessCommunicator"
+            desc="Bitcoind node Json RPC protocol"
+            eventHandler="net.sf.smbt.btc.node.cmdHandler"
+            frameInterpreter="net.sf.smbt.btc.node.frameInterpreter"
+            transports="HTTP">
+      </engine>
+   </extension>
+
+</plugin>

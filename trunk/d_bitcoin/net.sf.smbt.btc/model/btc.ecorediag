@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_C2jQIVXKEeOBjqgF6ndf-A" type="EcoreTools" name="btc" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_C2j3MFXKEeOBjqgF6ndf-A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_C2j3MVXKEeOBjqgF6ndf-A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_C2j3MlXKEeOBjqgF6ndf-A" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_C2j3M1XKEeOBjqgF6ndf-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="btc.ecore#//BitcoinMarket/broker"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2j3NFXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2j3NVXKEeOBjqgF6ndf-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="btc.ecore#//BitcoinMarket/high"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2j3NlXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2j3N1XKEeOBjqgF6ndf-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="btc.ecore#//BitcoinMarket/low"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2j3OFXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2j3OVXKEeOBjqgF6ndf-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="btc.ecore#//BitcoinMarket/volume"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2j3OlXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2j3O1XKEeOBjqgF6ndf-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="btc.ecore#//BitcoinMarket/buy"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2keQFXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2keQVXKEeOBjqgF6ndf-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="btc.ecore#//BitcoinMarket/sell"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2keQlXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2keQ1XKEeOBjqgF6ndf-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="btc.ecore#//BitcoinMarket/last"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2keRFXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2keRVXKEeOBjqgF6ndf-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="btc.ecore#//BitcoinMarket/currency"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2keRlXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2keR1XKEeOBjqgF6ndf-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="btc.ecore#//BitcoinMarket/average"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2keSFXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2keSVXKEeOBjqgF6ndf-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="btc.ecore#//BitcoinMarket/lastLocal"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2keSlXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2keS1XKEeOBjqgF6ndf-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="btc.ecore#//BitcoinMarket/lastOrig"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2keTFXKEeOBjqgF6ndf-A"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_C2keTVXKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_C2keTlXKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_C2keT1XKEeOBjqgF6ndf-A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_C2lFUFXKEeOBjqgF6ndf-A" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_C2lFUVXKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_C2lFUlXKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_C2lFU1XKEeOBjqgF6ndf-A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_C2lFVFXKEeOBjqgF6ndf-A" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="btc.ecore#//BitcoinMarket"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C2lFVVXKEeOBjqgF6ndf-A" x="176" y="20"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_C2lFVlXKEeOBjqgF6ndf-A" type="1005">
+    <children xmi:type="notation:Node" xmi:id="_C2lFV1XKEeOBjqgF6ndf-A" type="4010"/>
+    <children xmi:type="notation:Node" xmi:id="_C2lFWFXKEeOBjqgF6ndf-A" type="5008">
+      <children xmi:type="notation:Node" xmi:id="_C2lFWVXKEeOBjqgF6ndf-A" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="btc.ecore#//BtcCurrency/EUR"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2lFWlXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2lFW1XKEeOBjqgF6ndf-A" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="btc.ecore#//BtcCurrency/USD"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2lFXFXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2lFXVXKEeOBjqgF6ndf-A" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="btc.ecore#//BtcCurrency/BTC"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2lFXlXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2lFX1XKEeOBjqgF6ndf-A" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="btc.ecore#//BtcCurrency/GBP"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2lFYFXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2lsYFXKEeOBjqgF6ndf-A" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="btc.ecore#//BtcCurrency/JPY"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2lsYVXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2lsYlXKEeOBjqgF6ndf-A" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="btc.ecore#//BtcCurrency/AUD"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2lsY1XKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2lsZFXKEeOBjqgF6ndf-A" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="btc.ecore#//BtcCurrency/CAD"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2lsZVXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2lsZlXKEeOBjqgF6ndf-A" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="btc.ecore#//BtcCurrency/CHF"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2lsZ1XKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2lsaFXKEeOBjqgF6ndf-A" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="btc.ecore#//BtcCurrency/CNY"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2lsaVXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2lsalXKEeOBjqgF6ndf-A" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="btc.ecore#//BtcCurrency/HKD"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2lsa1XKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2lsbFXKEeOBjqgF6ndf-A" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="btc.ecore#//BtcCurrency/PLN"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2lsbVXKEeOBjqgF6ndf-A"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_C2lsblXKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_C2lsb1XKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_C2lscFXKEeOBjqgF6ndf-A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_C2mTcFXKEeOBjqgF6ndf-A" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EEnum" href="btc.ecore#//BtcCurrency"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C2mTcVXKEeOBjqgF6ndf-A" x="20" y="20"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_C2mTclXKEeOBjqgF6ndf-A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_C2mTc1XKEeOBjqgF6ndf-A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_C2mTdFXKEeOBjqgF6ndf-A" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_C2mTdVXKEeOBjqgF6ndf-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="btc.ecore#//ExchangeRate/from"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2mTdlXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2mTd1XKEeOBjqgF6ndf-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="btc.ecore#//ExchangeRate/rate"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2mTeFXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2mTeVXKEeOBjqgF6ndf-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="btc.ecore#//ExchangeRate/to"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2mTelXKEeOBjqgF6ndf-A"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_C2mTe1XKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_C2mTfFXKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_C2mTfVXKEeOBjqgF6ndf-A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_C2mTflXKEeOBjqgF6ndf-A" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_C2mTf1XKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_C2mTgFXKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_C2mTgVXKEeOBjqgF6ndf-A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_C2mTglXKEeOBjqgF6ndf-A" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="btc.ecore#//ExchangeRate"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C2m6gFXKEeOBjqgF6ndf-A" x="20" y="284"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_C2m6gVXKEeOBjqgF6ndf-A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_C2m6glXKEeOBjqgF6ndf-A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_C2m6g1XKEeOBjqgF6ndf-A" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_C2m6hFXKEeOBjqgF6ndf-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="btc.ecore#//Order/price"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2m6hVXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2m6hlXKEeOBjqgF6ndf-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="btc.ecore#//Order/volume"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2m6h1XKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2m6iFXKEeOBjqgF6ndf-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="btc.ecore#//Order/kind"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2m6iVXKEeOBjqgF6ndf-A"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_C2m6ilXKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_C2m6i1XKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_C2m6jFXKEeOBjqgF6ndf-A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_C2m6jVXKEeOBjqgF6ndf-A" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_C2m6jlXKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_C2m6j1XKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_C2m6kFXKEeOBjqgF6ndf-A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_C2m6kVXKEeOBjqgF6ndf-A" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="btc.ecore#//Order"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C2nhkFXKEeOBjqgF6ndf-A" x="204" y="284"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_C2nhkVXKEeOBjqgF6ndf-A" type="1005">
+    <children xmi:type="notation:Node" xmi:id="_C2nhklXKEeOBjqgF6ndf-A" type="4010"/>
+    <children xmi:type="notation:Node" xmi:id="_C2nhk1XKEeOBjqgF6ndf-A" type="5008">
+      <children xmi:type="notation:Node" xmi:id="_C2nhlFXKEeOBjqgF6ndf-A" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="btc.ecore#//OrderKind/ASK"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2nhlVXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2nhllXKEeOBjqgF6ndf-A" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="btc.ecore#//OrderKind/BID"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2nhl1XKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2nhmFXKEeOBjqgF6ndf-A" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="btc.ecore#//OrderKind/BOTH"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2nhmVXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_Y6vOAKn9EeKOWJXIfnRP8A" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="btc.ecore#//OrderKind/ANY"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Y6vOAan9EeKOWJXIfnRP8A"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_C2nhmlXKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_C2nhm1XKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_C2nhnFXKEeOBjqgF6ndf-A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_C2nhnVXKEeOBjqgF6ndf-A" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EEnum" href="btc.ecore#//OrderKind"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C2nhnlXKEeOBjqgF6ndf-A" x="568" y="104"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_C2oIoFXKEeOBjqgF6ndf-A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_C2oIoVXKEeOBjqgF6ndf-A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_C2oIolXKEeOBjqgF6ndf-A" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_C2oIo1XKEeOBjqgF6ndf-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="btc.ecore#//OrderInfo/high"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2oIpFXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2oIpVXKEeOBjqgF6ndf-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="btc.ecore#//OrderInfo/low"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2oIplXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2oIp1XKEeOBjqgF6ndf-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="btc.ecore#//OrderInfo/volume"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2oIqFXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2oIqVXKEeOBjqgF6ndf-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="btc.ecore#//OrderInfo/price"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2oIqlXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2oIq1XKEeOBjqgF6ndf-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="btc.ecore#//OrderInfo/date"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2oIrFXKEeOBjqgF6ndf-A"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_C2oIrVXKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_C2oIrlXKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_C2oIr1XKEeOBjqgF6ndf-A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_C2oIsFXKEeOBjqgF6ndf-A" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_C2oIsVXKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_C2oIslXKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_C2qk4FXKEeOBjqgF6ndf-A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_C2qk4VXKEeOBjqgF6ndf-A" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="btc.ecore#//OrderInfo"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C2qk4lXKEeOBjqgF6ndf-A" x="408" y="96"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_C2qk41XKEeOBjqgF6ndf-A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_C2qk5FXKEeOBjqgF6ndf-A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_C2qk5VXKEeOBjqgF6ndf-A" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_C2qk5lXKEeOBjqgF6ndf-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="btc.ecore#//Wallet/balance"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2rL8FXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2rL8VXKEeOBjqgF6ndf-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="btc.ecore#//Wallet/currency"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2rL8lXKEeOBjqgF6ndf-A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_C2rL81XKEeOBjqgF6ndf-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="btc.ecore#//Wallet/key"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2rL9FXKEeOBjqgF6ndf-A"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_C2rL9VXKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_C2rL9lXKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_C2rL91XKEeOBjqgF6ndf-A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_C2rL-FXKEeOBjqgF6ndf-A" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_C2rL-VXKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_C2rL-lXKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_C2rL-1XKEeOBjqgF6ndf-A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_C2rL_FXKEeOBjqgF6ndf-A" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="btc.ecore#//Wallet"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C2rL_VXKEeOBjqgF6ndf-A" x="376" y="284"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_C2rL_lXKEeOBjqgF6ndf-A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_C2rL_1XKEeOBjqgF6ndf-A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_C2rMAFXKEeOBjqgF6ndf-A" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_C2rMAVXKEeOBjqgF6ndf-A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="btc.ecore#//BitCoinNode/id"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_C2rzAFXKEeOBjqgF6ndf-A"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_C2rzAVXKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_C2rzAlXKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_C2rzA1XKEeOBjqgF6ndf-A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_C2rzBFXKEeOBjqgF6ndf-A" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_C2rzBVXKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_C2rzBlXKEeOBjqgF6ndf-A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_C2rzB1XKEeOBjqgF6ndf-A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_C2rzCFXKEeOBjqgF6ndf-A" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="btc.ecore#//BitCoinNode"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C2rzCVXKEeOBjqgF6ndf-A" x="560" y="20"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_C2rzClXKEeOBjqgF6ndf-A"/>
+  <element xmi:type="ecore:EPackage" href="btc.ecore#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_C2rzC1XKEeOBjqgF6ndf-A" type="3002" source="_C2j3MFXKEeOBjqgF6ndf-A" target="_C2mTclXKEeOBjqgF6ndf-A">
+    <children xmi:type="notation:Node" xmi:id="_C2rzDFXKEeOBjqgF6ndf-A" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_C2rzDVXKEeOBjqgF6ndf-A" x="-31" y="-34"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_C2rzDlXKEeOBjqgF6ndf-A" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_C2rzD1XKEeOBjqgF6ndf-A" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_C2rzEFXKEeOBjqgF6ndf-A" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_C2saEFXKEeOBjqgF6ndf-A" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="btc.ecore#//BitcoinMarket/exchangeRates"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_C2saEVXKEeOBjqgF6ndf-A" points="[-9, 20, 17, -115]$[-86, 96, -60, -39]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_C2saElXKEeOBjqgF6ndf-A" type="3002" source="_C2j3MFXKEeOBjqgF6ndf-A" target="_C2m6gVXKEeOBjqgF6ndf-A">
+    <children xmi:type="notation:Node" xmi:id="_C2saE1XKEeOBjqgF6ndf-A" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_C2saFFXKEeOBjqgF6ndf-A" x="-13" y="-20"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_C2saFVXKEeOBjqgF6ndf-A" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_C2saFlXKEeOBjqgF6ndf-A" x="3" y="15"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_C2saF1XKEeOBjqgF6ndf-A" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_C2saGFXKEeOBjqgF6ndf-A" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="btc.ecore#//BitcoinMarket/orders"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_C2saGVXKEeOBjqgF6ndf-A" points="[16, 20, -121, -123]$[82, 117, -55, -26]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_C2saGlXKEeOBjqgF6ndf-A" type="3002" source="_C2j3MFXKEeOBjqgF6ndf-A" target="_C2oIoFXKEeOBjqgF6ndf-A">
+    <children xmi:type="notation:Node" xmi:id="_C2saG1XKEeOBjqgF6ndf-A" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_C2saHFXKEeOBjqgF6ndf-A" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_C2saHVXKEeOBjqgF6ndf-A" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_C2saHlXKEeOBjqgF6ndf-A" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_C2tBIFXKEeOBjqgF6ndf-A" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_C2tBIVXKEeOBjqgF6ndf-A" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="btc.ecore#//BitcoinMarket/history"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_C2tBIlXKEeOBjqgF6ndf-A" points="[26, 17, -177, -107]$[151, 120, -52, -4]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_C2tBI1XKEeOBjqgF6ndf-A" id="(0.9716312056737588,0.631578947368421)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_C2tBJFXKEeOBjqgF6ndf-A" type="3002" source="_C2j3MFXKEeOBjqgF6ndf-A" target="_C2qk41XKEeOBjqgF6ndf-A">
+    <children xmi:type="notation:Node" xmi:id="_C2tBJVXKEeOBjqgF6ndf-A" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_C2tBJlXKEeOBjqgF6ndf-A" x="5" y="-14"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_C2tBJ1XKEeOBjqgF6ndf-A" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_C2tBKFXKEeOBjqgF6ndf-A" x="-9" y="13"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_C2tBKVXKEeOBjqgF6ndf-A" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_C2tBKlXKEeOBjqgF6ndf-A" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="btc.ecore#//BitcoinMarket/wallets"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_C2tBK1XKEeOBjqgF6ndf-A" points="[70, 62, -165, -148]$[236, 193, 1, -17]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_C2tBLFXKEeOBjqgF6ndf-A" id="(0.9787234042553191,0.8899521531100478)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_C2toMFXKEeOBjqgF6ndf-A" id="(0.425531914893617,0.04938271604938271)"/>
+  </edges>
+</notation:Diagram>

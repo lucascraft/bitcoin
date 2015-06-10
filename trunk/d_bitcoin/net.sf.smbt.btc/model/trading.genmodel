@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.sf.smbt.btc/src-model" editDirectory="/net.sf.smbt.btc.edit/src"
+    editorDirectory="/net.sf.smbt.btc.editor/src" modelPluginID="net.sf.smbt.btc"
+    modelName="Trading" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    testsDirectory="" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false" usedGenPackages="btc.genmodel#//btc">
+  <foreignModel>trading.ecore</foreignModel>
+  <genPackages prefix="Trading" basePackage="net.sf.smbt" disposableProviderFactory="true"
+      ecorePackage="trading.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="trading.ecore#//TriggerKind">
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//TriggerKind/CROSS_OVER"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//TriggerKind/CROSS_UNDER"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//TriggerKind/SATISFIES"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//TriggerKind/APPROXIMATES"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//TriggerKind/EXCLUDES"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//TriggerKind/WAS"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//TriggerKind/WILL_BE"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//TriggerKind/AS_USUAL"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//TriggerKind/EXCEPTIONAL"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//TriggerKind/WTF"/>
+      <genEnumLiterals ecoreEnumLiteral="trading.ecore#//TriggerKind/FIRST_TIME"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="trading.ecore#//ITradeRuleVisitorDelegate"/>
+    <genDataTypes ecoreDataType="trading.ecore#//IRuleEvalDelegate"/>
+    <genClasses ecoreClass="trading.ecore#//Robot">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Robot/uuid"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference trading.ecore#//Robot/triggers"/>
+    </genClasses>
+    <genClasses ecoreClass="trading.ecore#//Order">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Order/price_int"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Order/currency"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Order/volume"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Order/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Order/kind"/>
+    </genClasses>
+    <genClasses ecoreClass="trading.ecore#//TradingRule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//TradingRule/trigger"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//TradingRule/ratio"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//TradingRule/compliance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//TradingRule/evalDelegate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//TradingRule/ctx"/>
+      <genOperations ecoreOperation="trading.ecore#//TradingRule/compute">
+        <genParameters ecoreParameter="trading.ecore#//TradingRule/compute/ctx"/>
+      </genOperations>
+      <genOperations ecoreOperation="trading.ecore#//TradingRule/accept">
+        <genParameters ecoreParameter="trading.ecore#//TradingRule/accept/visitor"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="trading.ecore#//PriceRule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//PriceRule/price"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//PriceRule/percentTolerance"/>
+    </genClasses>
+    <genClasses ecoreClass="trading.ecore#//VolumeRule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//VolumeRule/volume"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//VolumeRule/tolerance"/>
+    </genClasses>
+    <genClasses ecoreClass="trading.ecore#//TimeRule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//TimeRule/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//TimeRule/tolerance"/>
+    </genClasses>
+    <genClasses ecoreClass="trading.ecore#//ConfidenceRule"/>
+    <genClasses ecoreClass="trading.ecore#//FearRule"/>
+    <genClasses ecoreClass="trading.ecore#//MojoRule"/>
+    <genClasses ecoreClass="trading.ecore#//HocusPocusRule"/>
+    <genClasses ecoreClass="trading.ecore#//MonteCarloRule"/>
+    <genClasses ecoreClass="trading.ecore#//EClass0"/>
+    <genClasses ecoreClass="trading.ecore#//CompositeRule">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference trading.ecore#//CompositeRule/children"/>
+    </genClasses>
+    <genClasses ecoreClass="trading.ecore#//AskBidDiffRule"/>
+    <genClasses ecoreClass="trading.ecore#//RuleVisitor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//RuleVisitor/delegate"/>
+      <genOperations ecoreOperation="trading.ecore#//RuleVisitor/eval">
+        <genParameters ecoreParameter="trading.ecore#//RuleVisitor/eval/rule"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="trading.ecore#//Trigger">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference trading.ecore#//Trigger/orders"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference trading.ecore#//Trigger/rules"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Trigger/uuid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Trigger/activated"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//Trigger/processed"/>
+    </genClasses>
+    <genClasses ecoreClass="trading.ecore#//OrderKindRule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute trading.ecore#//OrderKindRule/kind"/>
+    </genClasses>
+    <genClasses ecoreClass="trading.ecore#//TradeBotsConfig">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference trading.ecore#//TradeBotsConfig/bots"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

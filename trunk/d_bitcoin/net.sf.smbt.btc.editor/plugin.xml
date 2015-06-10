@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <wizard
+            canFinishEarly="true"
+            category="net.sf.smbt.ui"
+            class="net.sf.smbt.trading.presentation.TradingModelWizard"
+            finalPerspective="net.sf.smbt.ui.btcPerspective"
+            icon="icons/full/obj16/NewBitminter.gif"
+            id="net.sf.smbt.trading.presentation.TradingModelWizardID"
+            name="%_UI_TradingModelWizard_label">
+         <description>%_UI_TradingModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="net.sf.smbt.trading.presentation.TradingEditorID"
+            name="%_UI_TradingEditor_label"
+            icon="icons/full/obj16/TradingModelFile.gif"
+            extensions="bots"
+            class="net.sf.smbt.trading.presentation.TradingEditor"
+            contributorClass="net.sf.smbt.trading.presentation.TradingActionBarContributor">
+      </editor>
+   </extension>
+   
+   
+   
+   
+   
+   
+   
+   
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-dmx-contrib">
+      <propertyContributor
+            contributorId="net.sf.smbt.trading.presentation.TradingEditorID"
+            labelProvider="net.sf.smbt.btc.editior.gui.TradingSheetLabelProvider">
+         <propertyCategory category="trading"/>
+      </propertyContributor>
+   </extension>
+
+  <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs-trades">
+      <propertyTabs contributorId="net.sf.smbt.trading.presentation.TradingEditorID">
+		  <propertyTab
+          category="trading"
+          id="property.tab.trades"
+          image="icons/TradeBotsConfig.gif"
+          label="Configuration"/>
+     </propertyTabs>
+  </extension>
+
+  <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs-notifications">
+      <propertyTabs contributorId="net.sf.smbt.trading.presentation.TradingEditorID">
+		  <propertyTab
+          category="trading"
+          id="property.tab.notifications"
+          image="icons/JsonNotification.gif"
+          label="Notification"/>
+     </propertyTabs>
+  </extension>
+
+  <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs-robots">
+      <propertyTabs contributorId="net.sf.smbt.trading.presentation.TradingEditorID">
+		  <propertyTab
+          category="trading"
+          id="property.tab.robots"
+          image="icons/Robot.gif"
+          label="Robot"/>
+     </propertyTabs>
+  </extension>
+
+  <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs-orders">
+      <propertyTabs contributorId="net.sf.smbt.trading.presentation.TradingEditorID">
+		  <propertyTab
+          category="trading"
+          id="property.tab.orders"
+          image="icons/Order.gif"
+          label="Order"/>
+     </propertyTabs>
+  </extension>
+
+  <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs-trigger">
+      <propertyTabs contributorId="net.sf.smbt.trading.presentation.TradingEditorID">
+		  <propertyTab
+          category="trading"
+          id="property.tab.triggers"
+          image="icons/Trigger.gif"
+          label="Triggers"/>
+     </propertyTabs>
+  </extension>
+  
+  <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs-rules">
+      <propertyTabs contributorId="net.sf.smbt.trading.presentation.TradingEditorID">
+		  <propertyTab
+          category="trading"
+          id="property.tab.rules"
+          image="icons/TradingRule.gif"
+          label="Rules"/>
+     </propertyTabs>
+  </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections-trading">
+      <propertySections contributorId="net.sf.smbt.trading.presentation.TradingEditorID">
+      
+       <propertySection
+            id="property.section.ubiquisense.sequencer.properties.orders.price" 
+            tab="property.tab.orders"
+            class="net.sf.smbt.btc.editior.gui.TradingOrderPricePropertySection"
+        >
+            <input type="net.sf.smbt.trading.Order"/>
+       </propertySection>
+       <propertySection
+            id="property.section.ubiquisense.sequencer.properties.orders.currency" 
+            tab="property.tab.orders"
+            class="net.sf.smbt.btc.editior.gui.TradingOrderCurrencyPropertySection"
+        >
+            <input type="net.sf.smbt.trading.Order"/>
+       </propertySection>
+       <propertySection
+            id="property.section.ubiquisense.sequencer.properties.orders.message" 
+            tab="property.tab.orders"
+            class="net.sf.smbt.btc.editior.gui.TradingOrderMessagePropertySection"
+        >
+            <input type="net.sf.smbt.trading.Order"/>
+       </propertySection>
+       <propertySection
+            id="property.section.ubiquisense.sequencer.properties.orders.kind" 
+            tab="property.tab.orders"
+            class="net.sf.smbt.btc.editior.gui.TradingOrderKindPropertySection"
+        >
+            <input type="net.sf.smbt.trading.Order"/>
+       </propertySection>
+      <propertySection
+            id="property.section.ubiquisense.sequencer.properties.orders.volume" 
+            tab="property.tab.orders"
+            class="net.sf.smbt.btc.editior.gui.TradingOrderVolumePropertySection"
+        >
+            <input type="net.sf.smbt.trading.Order"/>
+       </propertySection>
+       <propertySection
+            id="property.section.ubiquisense.sequencer.properties.notifications" 
+            tab="property.tab.notifications"
+            class="net.sf.smbt.btc.editior.gui.TradingNotificationTargetPropertySection"
+        >
+            <input type="net.sf.smbt.trading.Notification"/>
+       </propertySection>
+       <propertySection
+            id="property.section.ubiquisense.sequencer.properties.trades" 
+            tab="property.tab.trades"
+            class="net.sf.smbt.btc.editior.gui.TradingConfigPropertySection"
+        >
+            <input type="net.sf.smbt.trading.TradeBotsConfig"/>
+       </propertySection>
+       <propertySection
+            id="property.section.ubiquisense.sequencer.properties.robots" 
+            tab="property.tab.robots"
+            class="net.sf.smbt.btc.editior.gui.TradingBotLabelPropertySection"
+        >
+            <input type="net.sf.smbt.trading.Robot"/>
+       </propertySection>
+       
+       
+       <propertySection
+             class="net.sf.smbt.btc.editior.gui.TradingPriceRulePricePropertySection"
+             id="property.section.ubiquisense.sequencer.properties.rules.price.price"
+             tab="property.tab.rules">
+          <input
+                type="net.sf.smbt.trading.PriceRule">
+          </input>
+       </propertySection>
+       <!--
+       <propertySection
+             class="net.sf.smbt.btc.editior.gui.TradingPriceRuleKindPropertySection"
+             id="property.section.ubiquisense.sequencer.properties.rules.price.kind"
+             tab="property.tab.rules">
+          <input
+                type="net.sf.smbt.trading.PriceRule">
+          </input>
+       </propertySection>
+       -->
+       
+       <propertySection
+             class="net.sf.smbt.btc.editior.gui.TradingPriceRuleCurrencyPropertySection"
+             id="property.section.ubiquisense.sequencer.properties.rules.price.currency"
+             tab="property.tab.rules">
+          <input
+                type="net.sf.smbt.trading.PriceRule">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.btc.editior.gui.TradingPriceRuleLabelPropertySection"
+             id="property.section.ubiquisense.sequencer.properties.rules.price.label"
+             tab="property.tab.rules">
+          <input
+                type="net.sf.smbt.trading.PriceRule">
+          </input>
+       </propertySection>
+       <!--
+       <propertySection
+             class="net.sf.smbt.btc.editior.gui.TradingPriceRuleRatioPropertySection"
+             id="property.section.ubiquisense.sequencer.properties.rules.price.ratio"
+             tab="property.tab.rules">
+          <input
+                type="net.sf.smbt.trading.PriceRule">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.btc.editior.gui.TradingVolumeRuleKindPropertySection"
+             id="property.section.ubiquisense.sequencer.properties.rules.volume.kind"
+             tab="property.tab.rules">
+          <input
+                type="net.sf.smbt.trading.VolumeRule">
+          </input>
+       </propertySection>
+       -->
+       <propertySection
+             class="net.sf.smbt.btc.editior.gui.TradingVolumeRuleLabelPropertySection"
+             id="property.section.ubiquisense.sequencer.properties.rules.volume.label"
+             tab="property.tab.rules">
+          <input
+                type="net.sf.smbt.trading.VolumeRule">
+          </input>
+       </propertySection>
+       <!--
+       <propertySection
+             class="net.sf.smbt.btc.editior.gui.TradingVolumeRuleRatioPropertySection"
+             id="property.section.ubiquisense.sequencer.properties.rules.volume.ratio"
+             tab="property.tab.rules">
+          <input
+                type="net.sf.smbt.trading.VolumeRule">
+          </input>
+      </propertySection>
+      -->
+      <propertySection
+             class="net.sf.smbt.btc.editior.gui.TradingVolumeRuleVolumePropertySection"
+             id="property.section.ubiquisense.sequencer.properties.rules.volume.volume"
+             tab="property.tab.rules">
+          <input
+                type="net.sf.smbt.trading.VolumeRule">
+          </input>
+       </propertySection>
+
+
+
+
+
+
+
+
+
+       
+       <propertySection
+             class="net.sf.smbt.btc.editior.gui.TradingTriggerLabelPropertySection"
+             id="property.section.ubiquisense.sequencer.properties.trigger"
+             tab="property.tab.triggers">
+          <input
+                type="net.sf.smbt.trading.Trigger">
+          </input>
+       </propertySection>
+       <propertySection
+             class="net.sf.smbt.btc.editior.gui.TradingTriggerActivePropertySection"
+             id="property.section.ubiquisense.sequencer.properties.trigger.active"
+             tab="property.tab.triggers">
+          <input
+                type="net.sf.smbt.trading.Trigger">
+          </input>
+       </propertySection>
+
+      </propertySections>
+   </extension>
+   
+   
+</plugin>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.sf.smbt.btc.mtgox/src-model" editDirectory="/net.sf.smbt.btc.mtgox.edit/src"
+    editorDirectory="" modelPluginID="net.sf.smbt.btc.mtgox" modelName="Mtgox" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    testsDirectory="" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false" optimizedHasChildren="true" usedGenPackages="../../net.sf.smbt.btc/model/btc.genmodel#//btc ../../net.sf.smbt.comm.http/model/httpcmd.genmodel#//httpcmd ../../net.sf.xqz.engine/model/temporal.genmodel#//cmd">
+  <foreignModel>mtgox.ecore</foreignModel>
+  <genPackages prefix="Mtgox" basePackage="net.sf.smbt.btc" disposableProviderFactory="true"
+      ecorePackage="mtgox.ecore#/">
+    <genClasses ecoreClass="mtgox.ecore#//MTGox">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//MTGox/login"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//MTGox/password"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//MTGox/apiKey"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mtgox.ecore#//MTGox/market"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//MTGox/currency"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//MTGox/feeRate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mtgox.ecore#//MTGox/highV"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mtgox.ecore#//MTGox/lowV"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mtgox.ecore#//MTGox/sellV"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mtgox.ecore#//MTGox/buyV"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mtgox.ecore#//MTGox/lastV"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mtgox.ecore#//MTGox/volumeV"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mtgox.ecore#//MTGox/trend"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mtgox.ecore#//MTGox/fetchs"/>
+    </genClasses>
+    <genClasses ecoreClass="mtgox.ecore#//MTGoxCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//MTGoxCmd/jsonSnd"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//MTGoxCmd/jsonRcv"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//MTGoxCmd/query"/>
+    </genClasses>
+    <genClasses ecoreClass="mtgox.ecore#//CompactValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//CompactValue/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//CompactValue/value_int"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//CompactValue/display"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//CompactValue/display_short"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//CompactValue/currency"/>
+    </genClasses>
+    <genClasses ecoreClass="mtgox.ecore#//Fundamentals">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//Fundamentals/high"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//Fundamentals/low"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//Fundamentals/buy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//Fundamentals/sell"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//Fundamentals/last"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//Fundamentals/average"/>
+    </genClasses>
+    <genClasses ecoreClass="mtgox.ecore#//FetchValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//FetchValue/stamp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//FetchValue/price"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//FetchValue/amount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//FetchValue/priceInt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//FetchValue/amountInt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//FetchValue/tid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//FetchValue/currency"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//FetchValue/item"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//FetchValue/tradeType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//FetchValue/primary"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mtgox.ecore#//FetchValue/properties"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
