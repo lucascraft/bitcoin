@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+
+
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="net.sf.smbt.ui.btc.pools.ui.prefs.BitMinterPoolsPreferencePage"
+            id="net.sf.smbt.ui.btc.pools.ui.prefs.BtcPoolsPreferencePage"
+            name="BitMinter">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="net.sf.smbt.ui.btc.pools.ui.prefs.BitMinterPoolsPreferenceInitializer">
+      </initializer>
+   </extension>
+
+
+
+
+
+
+   <extension
+         point="net.sf.smbt.ui.actions">
+      <action
+            ID="net.sf.smbt.ui.btc.pools.actions.ConnectArduinoAction"
+            action="net.sf.smbt.ui.btc.pools.ui.actions.ConnectAsicOverUSBAction">
+      </action>
+   </extension>
+
+
+
+
+
+
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="net.sf.smbt.ui.btc.pools.ui.editors.bitminter.BitMinterPoolsEditor"
+            contributorClass="net.sf.smbt.ui.btc.pools.ui.editors.bitminter.BitMinterPoolsActionBarContributor"
+            extensions="bitminter"
+            icon="icons/bitcoin.png"
+            id="net.sf.smbt.ui.btc.pools.ui.editors.BtcPoolsEditor"
+            name="BitMinter">
+      </editor>
+   </extension>
+
+
+
+
+
+
+
+
+  
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-bitminter-contrib">
+      <propertyContributor
+            contributorId="net.sf.smbt.ui.bitminter"
+            labelProvider="net.sf.smbt.ui.btc.pools.ui.properties.BitMinterSheetLabelProvider">
+         <propertyCategory category="bitMinter"/>
+      </propertyContributor>
+   </extension>
+
+  <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs-bitminter">
+      <propertyTabs contributorId="net.sf.smbt.ui.bitminter">
+		  <propertyTab
+          category="bitMinter"
+          id="property.tab.bitMinter"
+          image="icons/bitcoin.png"
+          label="Stats"/>
+     </propertyTabs>
+  </extension>
+  
+  <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs-workers">
+      <propertyTabs contributorId="net.sf.smbt.ui.bitminter">
+		  <propertyTab
+          category="bitMinter"
+          id="property.tab.worker"
+          image="icons/network_cloud.png"
+          label="Worker"/>
+     </propertyTabs>
+  </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections-bitminter">
+      <propertySections contributorId="net.sf.smbt.ui.bitminter">
+
+       <!-- EnvronmentType PROPERTIES -->
+
+       <propertySection
+            id="property.section.ubiquisense.bitminter.properties.bitMinter" 
+            tab="property.tab.bitMinter"
+            class="net.sf.smbt.ui.btc.pools.ui.properties.BitMinterInfoPropertySection"
+        >
+            <input type="net.sf.smbt.btc.pools.bitminter.BitMinterConfig"/>
+       </propertySection>
+       
+       <propertySection
+            id="property.section.ubiquisense.bitminter.properties.worker" 
+            tab="property.tab.worker"
+            class="net.sf.smbt.ui.btc.pools.ui.properties.WorkerPropertySection"
+        >
+            <input type="net.sf.smbt.btc.pools.bitminter.Worker"/>
+       </propertySection>
+
+      </propertySections>
+   </extension>
+
+</plugin>

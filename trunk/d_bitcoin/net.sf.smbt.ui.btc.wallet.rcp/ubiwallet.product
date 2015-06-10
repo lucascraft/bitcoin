@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="UbiWallet" uid="UbiWallet" id="net.sf.smbt.ui.btc.wallet.rcp.product" application="net.sf.smbt.ui.btc.wallet.rcp.application" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
+   </launcherArgs>
+
+   <windowImages i16="icons/alt_window_16.gif" i32="icons/alt_window_32.gif"/>
+
+   <launcher>
+      <solaris/>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+   <vm>
+   </vm>
+
+   <plugins>
+      <plugin id="at.bestsolution.efxclipse.runtime.osgi" fragment="true"/>
+      <plugin id="com.ibm.icu"/>
+      <plugin id="net.sf.smbt.ui.btc.wallet.rcp"/>
+      <plugin id="org.apache.derby.jdbc_1053.fragment" fragment="true"/>
+      <plugin id="org.apache.derby.jdbc_1082.fragment" fragment="true"/>
+      <plugin id="org.eclipse.core.commands"/>
+      <plugin id="org.eclipse.core.contenttype"/>
+      <plugin id="org.eclipse.core.databinding"/>
+      <plugin id="org.eclipse.core.databinding.observable"/>
+      <plugin id="org.eclipse.core.databinding.property"/>
+      <plugin id="org.eclipse.core.expressions"/>
+      <plugin id="org.eclipse.core.jobs"/>
+      <plugin id="org.eclipse.core.runtime"/>
+      <plugin id="org.eclipse.core.runtime.compatibility.registry" fragment="true"/>
+      <plugin id="org.eclipse.equinox.app"/>
+      <plugin id="org.eclipse.equinox.common"/>
+      <plugin id="org.eclipse.equinox.preferences"/>
+      <plugin id="org.eclipse.equinox.registry"/>
+      <plugin id="org.eclipse.help"/>
+      <plugin id="org.eclipse.jface"/>
+      <plugin id="org.eclipse.jface.databinding"/>
+      <plugin id="org.eclipse.osgi"/>
+      <plugin id="org.eclipse.swt"/>
+      <plugin id="org.eclipse.swt.cocoa.macosx.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.ui"/>
+      <plugin id="org.eclipse.ui.cocoa" fragment="true"/>
+      <plugin id="org.eclipse.ui.forms"/>
+      <plugin id="org.eclipse.ui.intro"/>
+      <plugin id="org.eclipse.ui.workbench"/>
+   </plugins>
+
+   <features>
+      <feature id="net.sf.smbt.ui.btc.wallet" version="0.5.0.qualifier"/>
+      <feature id="net.sf.smbt.ui" version="0.5.0.qualifier"/>
+      <feature id="net.sf.smbt.ubicomp" version="0.5.0.qualifier"/>
+      <feature id="net.sf.smbt.ui.generic" version="0.5.0.qualifier"/>
+      <feature id="net.sf.smbt.ui.widgets" version="0.5.0.qualifier"/>
+      <feature id="net.sf.xqz.ui"/>
+      <feature id="org.rxtx"/>
+      <feature id="net.sf.xqz.fwk"/>
+      <feature id="net.sf.smbt.core"/>
+      <feature id="org.eclipse.rcp" version="3.8.2.v20130118-180157-96BuGOZFxwOAeG8Ofmqicz0tPK"/>
+   </features>
+
+
+</product>

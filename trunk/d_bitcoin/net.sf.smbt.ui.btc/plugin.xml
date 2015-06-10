@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+         
+      <view
+            allowMultiple="false"
+            category="net.sf.smbt.ui.btc.category"
+            class="net.sf.smbt.ui.btc.views.TradesView"
+            icon="icons/bitcoin-trade.png"
+            id="net.sf.smbt.ui.btc.transactions"
+            name="Trades"
+            restorable="true">
+      </view>
+      <!--
+     <view
+           allowMultiple="false"
+           category="net.sf.smbt.ui.btc.category"
+           class="net.sf.smbt.ui.btc.views.MarketView"
+           icon="icons/bitcoin-charts.png"
+           id="net.sf.smbt.ui.btc.chart"
+           name="Chart"
+           restorable="true">
+      </view>
+      -->
+      <view
+			allowMultiple="false"
+            category="net.sf.smbt.ui.btc.category"
+            class="net.sf.smbt.ui.btc.views.MtGoxAuthView"
+            icon="icons/bitcoin.png"
+            id="net.sf.smbt.ui.btc.mtgoxconfig"
+            name="Config"
+			restorable="true"
+	  >
+      </view>
+      
+      <view
+			allowMultiple="false"
+            category="net.sf.smbt.ui.btc.category"
+            class="net.sf.smbt.ui.btc.views.OrderView"
+            icon="icons/bitcoin-orders.png"
+            id="net.sf.smbt.ui.btc.trade"
+            name="Orders"
+			restorable="true">
+      </view>
+     
+           <view
+                 allowMultiple="false"
+                 category="net.sf.smbt.ui.btc.category"
+                 class="net.sf.smbt.ui.btc.views.MTGoxView"
+                 icon="icons/bitcoin-wallet.png"
+                 id="net.sf.smbt.ui.btc.wallet"
+                 name="MTGox"
+                 restorable="true">
+      </view>
+           <category
+                 id="net.sf.smbt.ui.btc.category"
+                 name="BitCoin">
+           </category>
+           <view
+                 category="net.sf.smbt.ui.btc.category"
+                 class="net.sf.smbt.ui.btc.views.BitcoinNodeView"
+                 icon="icons/bitcoin.png"
+                 id="net.sf.smbt.ui.btc.bitcoinDNodeView"
+                 name="Bitcoin Node"
+                 restorable="true">
+           </view>
+          <view
+                 category="net.sf.smbt.ui.btc.category"
+                 class="net.sf.smbt.ui.btc.views.BlockChainMaketCapView"
+                 icon="icons/bitcoin.png"
+                 id="net.sf.smbt.ui.btc.views.BlockChainMarketCapView"
+                 name="Market Capitalization"
+                 restorable="true">
+           </view>
+         <view
+                 category="net.sf.smbt.ui.btc.category"
+                 class="net.sf.smbt.ui.btc.views.BlockChainHashPowerView"
+                 icon="icons/bitcoin.png"
+                 id="net.sf.smbt.ui.btc.views.BlockChainHashPowerView"
+                 name="Hash Power"
+                 restorable="true">
+           </view>
+         <view
+                 category="net.sf.smbt.ui.btc.category"
+                 class="net.sf.smbt.ui.btc.views.BlockChainDifficultyView"
+                 icon="icons/bitcoin.png"
+                 id="net.sf.smbt.ui.btc.views.BlockDifficultyView"
+                 name="Difficulty"
+                 restorable="true">
+           </view>
+        <view
+                 category="net.sf.smbt.ui.btc.category"
+                 class="net.sf.smbt.ui.btc.views.BTCMarketView"
+                 icon="icons/bitcoin.png"
+                 id="net.sf.smbt.ui.btc.views.BTCMarketView"
+                 name="Prices"
+                 restorable="true">
+           </view>
+   </extension>    
+   
+   <!--
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="net.sf.smbt.ui.btcPerspective">
+         <view
+               closeable="true"
+               id="net.sf.smbt.ui.btc.trade"
+               minimized="false"
+               moveable="true"
+               ratio="0.33f"
+               relationship="right"
+               relative="net.sf.smbt.ui.btc.chart"
+               showTitle="false"
+               visible="true">
+         </view>
+         <actionSet
+               id="net.sf.smbt.ui.btc.actionSet">
+         </actionSet>
+      </perspectiveExtension>
+   </extension>
+   -->
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="net.sf.smbt.ui.blockchainPerspective">
+         <view
+               closeable="true"
+               id="net.sf.smbt.ui.btc.bitcoinDNodeView"
+               minimized="false"
+               moveable="true"
+               ratio="0.66"
+               relationship="right"
+               relative="org.eclipse.ui.console.ConsoleView"
+               showTitle="true"
+               visible="true">
+         </view>
+        <view
+               closeable="true"
+               id="net.sf.smbt.ui.btc.views.BlockChainMarketCapView"
+               minimized="false"
+               moveable="true"
+               ratio="0.33"
+               relationship="top"
+               relative="org.eclipse.ui.console.ConsoleView"
+               showTitle="true"
+               visible="true">
+         </view>
+       <view
+               closeable="true"
+               id="net.sf.smbt.ui.btc.views.BlockChainHashPowerView"
+               minimized="false"
+               moveable="true"
+               ratio="0.33"
+               relationship="right"
+               relative="net.sf.smbt.ui.btc.views.BlockChainMarketCapView"
+               showTitle="true"
+               visible="true">
+         </view>
+      <view
+               closeable="true"
+               id="net.sf.smbt.ui.btc.views.BTCMarketView"
+               minimized="false"
+               moveable="true"
+               ratio="0.33"
+               relationship="stack"
+               relative="net.sf.smbt.ui.btc.views.BlockChainHashPowerView"
+               showTitle="true"
+               visible="true">
+         </view>
+      <view
+               closeable="true"
+               id="net.sf.smbt.ui.btc.views.BlockDifficultyView"
+               minimized="false"
+               moveable="true"
+               ratio="0.33"
+               relationship="right"
+               relative="net.sf.smbt.ui.btc.views.BlockChainHashPowerView"
+               showTitle="true"
+               visible="true">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="net.sf.smbt.ui.btcPerspective">
+         <view
+               closeable="true"
+               id="net.sf.smbt.ui.btc.wallet"
+               minimized="false"
+               moveable="true"
+               ratio="0.3"
+               relationship="left"
+               relative="net.sf.smbt.ui.btc.trade"
+               showTitle="false"
+               visible="true">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="net.sf.smbt.ui.btcPerspective">
+         <view
+               closeable="true"
+               id="net.sf.smbt.ui.btc.transactions"
+               minimized="false"
+               moveable="true"
+               ratio="0.5"
+               relationship="bottom"
+               relative="net.sf.smbt.ui.btc.trade"
+               showTitle="false"
+               visible="true">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   
+   <!--
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="net.sf.smbt.ui.btcPerspective">
+         <view
+               closeable="true"
+               id="net.sf.smbt.ui.btc.mtgoxconfig"
+               minimized="false"
+               moveable="true"
+               ratio="0.5"
+               relationship="bottom"
+               relative="net.sf.smbt.ui.btc.trade"
+               showTitle="false"
+               visible="true">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   -->
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="net.sf.smbt.ui.btcPerspective">
+         <view
+               closeable="true"
+               id="net.sf.smbt.ui.btc.views.BTCMarketView"
+               minimized="false"
+               moveable="true"
+               relationship="top"
+               relative="org.eclipse.ui.console.ConsoleView"
+               showTitle="false"
+               visible="true">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="net.sf.smbt.ui.btc.views.BitcoinPerspective"
+            fixed="true"
+            icon="icons/bitcoin.png"
+            id="net.sf.smbt.ui.btcPerspective"
+            name="BitCoin">
+      </perspective>
+      <perspective
+            class="net.sf.smbt.ui.btc.views.BlockchainPerspective"
+           fixed="true"
+            icon="icons/network_cloud.png"
+            id="net.sf.smbt.ui.blockchainPerspective"
+            name="Blockchain">
+            >
+      </perspective>
+   </extension>
+   
+   
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="net.sf.smbt.ui.btc.prefs.MtGoxWalletPreferencePage"
+            id="net.sf.smbt.ui.btc.prefs.MtGoxWalletPreferencePage"
+            name="MT GOX">
+      </page>
+      <page
+            class="net.sf.smbt.ui.btc.prefs.BlockchainWalletPreferencePage"
+            id="net.sf.smbt.ui.btc.prefs.BlockchainWalletPreferencePage"
+            name="Blockchain">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="net.sf.smbt.ui.btc.prefs.MtGoxWalletPreferenceInitializer">
+      </initializer>
+      <initializer
+            class="net.sf.smbt.ui.btc.prefs.BlockchainWalletPreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            description="Bitcoin Managment"
+            id="net.sf.smbt.ui.btc.actionSet"
+            label="MtGOX Bticoin"
+            visible="true">
+         <menu
+               icon="icons/bitcoin-menu.png"
+               id="mtgoxMenu"
+               label="MtGOX">
+            <separator
+                  name="mtgoxGroup">
+            </separator>
+         </menu>
+         <action
+               class="net.sf.smbt.ui.btc.actions.OpenMtGoxConfigViewAction"
+               icon="icons/bitcoin.png"
+               id="net.sf.smbt.ui.btc.actions.OpenMtGoxConfigViewAction"
+               label="Open Bticoin &amp;Configuration View"
+               menubarPath="mtgoxMenu/mtgoxGroup"
+               toolbarPath="mtgoxGroup"
+               tooltip="Open Bitcoin Configuration View">
+         </action>
+         <action
+               class="net.sf.smbt.ui.btc.actions.OpenBitcoinChartViewAction"
+               icon="icons/bitcoin-charts.png"
+               id="net.sf.smbt.ui.btc.actions.OpenBitcoinChartViewAction"
+               label="Open Bticoin &amp;Chart View"
+               menubarPath="mtgoxMenu/mtgoxGroup"
+               toolbarPath="mtgoxGroup"
+               tooltip="Open Bitcoin Chart View">
+         </action>
+         <action
+               class="net.sf.smbt.ui.btc.actions.OpenBitcoinOrdersViewAction"
+               icon="icons/bitcoin-orders.png"
+               id="net.sf.smbt.ui.btc.actions.OpenBitcoinOrdersViewAction"
+               label="Open Bticoin &amp;Orders View"
+               menubarPath="mtgoxMenu/mtgoxGroup"
+               toolbarPath="mtgoxGroup"
+               tooltip="Open Bitcoin Orders View">
+         </action>
+         <action
+               class="net.sf.smbt.ui.btc.actions.OpenBitcoinTradesViewAction"
+               icon="icons/bitcoin-trade.png"
+               id="net.sf.smbt.ui.btc.actions.OpenBitcoinTradesViewAction"
+               label="Open Bticoin &amp;Trades View"
+               menubarPath="mtgoxMenu/mtgoxGroup"
+               toolbarPath="mtgoxGroup"
+               tooltip="Open Bitcoin Trades View">
+         </action>
+         <action
+               class="net.sf.smbt.ui.btc.actions.OpenBitcoinWalletViewAction"
+               icon="icons/bitcoin-wallet.png"
+               id="net.sf.smbt.ui.btc.actions.OpenBitcoinWalletViewAction"
+               label="Open Bticoin &amp;Wallet View"
+               menubarPath="mtgoxMenu/mtgoxGroup"
+               toolbarPath="mtgoxGroup"
+               tooltip="Open Bitcoin Wallet View">
+         </action>
+         <action
+               class="net.sf.smbt.ui.btc.actions.MtGoxBotsLaunchConfigAction"
+               icon="icons/alarm.png"
+               id="net.sf.smbt.ui.btc.actions.MtGoxBotsLaunchConfigAction"
+               label="&amp;LaunchTrade Bots Server"
+               menubarPath="mtgoxMenu/mtgoxGroup"
+               toolbarPath="mtgoxGroup"
+               tooltip="Launch Trade Bots Server">
+         </action>
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro">
+      <intro
+            class="org.eclipse.ui.part.IntroPart"
+            icon="intro/css/graphics/ubiquisense-32.png"
+            id="net.sf.smbt.ui.btc.intro"
+            label="MtGOX">
+      </intro>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro.configExtension">
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig"
+            content="intro/sample.xml">
+      </configExtension>
+   </extension>
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    <extension
+         point="org.eclipse.ui.ide.resourceFilters">
+      <filter
+            pattern=".*bots"
+            selected="true">
+      </filter>
+   </extension>
+   
+   
+   
+   
+   <extension point="org.eclipse.ui.navigator.navigatorContent">
+    <commonFilter
+        description="Hides *.bots resources"
+        id="com.xyz.commonFilter.hidePj"
+        name="*.bots resources"
+        activeByDefault="true"
+    >
+        <filterExpression>
+            <and>
+                <adapt type="org.eclipse.core.resources.IResource">
+                    <test property="org.eclipse.core.resources.name" value="*.bots"/>
+                </adapt>
+            </and>
+        </filterExpression>
+    </commonFilter>
+   </extension>
+
+	<extension point="org.eclipse.ui.navigator.viewer">
+	    <viewerContentBinding
+	          viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+	          <includes>
+	            <contentExtension pattern="com.xyz.commonFilter.hidePj"/> 
+	          </includes>
+	    </viewerContentBinding>
+	</extension>
+	
+	<extension point="org.eclipse.ui.navigator.viewer">
+	    <viewerContentBinding
+	          viewerId="net.sf.smbt.ui.navigator">
+	          <includes>
+	            <contentExtension pattern="com.xyz.commonFilter.hidePj"/> 
+	          </includes>
+	    </viewerContentBinding>
+	</extension>
+   
+   
+   
+
+</plugin>

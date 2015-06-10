@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="net.sf.smbt.ui"
+            class="net.sf.smbt.ui.btc.wallet.view.BitcoinWalletView"
+            icon="icons/coins.png"
+            id="net.sf.smbt.ui.btc.wallet.view"
+            name="Wallet"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="net.sf.smbt.ui.btc.wallet.editor.BitcoinWalletEditor"
+            contributorClass="net.sf.smbt.ui.btc.wallet.editor.BitcoinWalletActionBarContribution"
+            default="false"
+            extensions="wallet"
+            icon="icons/wallet.png"
+            id="net.sf.smbt.ui.btc.wallet.editor"
+            name="Bitcoin Wallet">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <wizard
+            category="net.sf.smbt.ui"
+            class="net.sf.smbt.ui.btc.wallet.wizard.CreateBTCWalletWizard"
+            descriptionImage="icons/bitcoin.png"
+            finalPerspective="net.sf.smbt.ui.btcPerspective"
+            hasPages="true"
+            icon="icons/wallet2.png"
+            id="net.sf.smbt.ui.btc.wallet.wizard"
+            name="Bitcoin Wallet"
+            project="true">
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.ide.resourceFilters">
+      <filter
+            pattern=".*spvchain"
+            selected="true">
+      </filter>
+   </extension>
+   
+   
+   
+   
+   <extension point="org.eclipse.ui.navigator.navigatorContent">
+    <commonFilter
+        description="Hides *.spvchain resources"
+        id="com.xyz.commonFilter.hidePj"
+        name="*.spvchain resources"
+        activeByDefault="true"
+        
+    >
+        <filterExpression>
+            <and>
+                <adapt type="org.eclipse.core.resources.IResource">
+                    <test property="org.eclipse.core.resources.name" value="*.spvchain"/>
+                </adapt>
+            </and>
+        </filterExpression>
+    </commonFilter>
+   </extension>
+
+	<extension point="org.eclipse.ui.navigator.viewer">
+	    <viewerContentBinding
+	          viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+	          <includes>
+	            <contentExtension pattern="com.xyz.commonFilter.hidePj"/> 
+	          </includes>
+	    </viewerContentBinding>
+	</extension>
+	
+	<extension point="org.eclipse.ui.navigator.viewer">
+	    <viewerContentBinding
+	          viewerId="net.sf.smbt.ui.navigator">
+	          <includes>
+	            <contentExtension pattern="com.xyz.commonFilter.hidePj"/> 
+	          </includes>
+	    </viewerContentBinding>
+	</extension>
+	
+	<!--
+ <extension
+       point="org.eclipse.ui.preferencePages">
+    <page
+          class="net.sf.smbt.ui.btc.wallet.preferences.BtcWalletPreferencePage"
+          id="net.sf.smbt.ui.btc.wallet.preferences.BtcWalletPreferencePage"
+          name="Bitcoin Wallet Preferences">
+    </page>
+ </extension>
+ <extension
+       point="org.eclipse.core.runtime.preferences">
+    <initializer
+          class="net.sf.smbt.ui.btc.wallet.preferences.PreferenceInitializer">
+    </initializer>
+ </extension>
+ -->
+</plugin>
