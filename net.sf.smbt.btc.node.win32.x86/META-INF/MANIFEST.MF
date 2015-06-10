@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: Oficcial Bitcoin Node for Win32 X86
-Bundle-SymbolicName: net.sf.smbt.btc.node.win32.x86
-Bundle-Version: 1.0.0.qualifier
-Bundle-Vendor: www.bitcoin.org
-Fragment-Host: net.sf.smbt.btc.node;bundle-version="0.5.0"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Eclipse-PlatformFilter: (& (osgi.os=win32) (osgi.arch=x86))
