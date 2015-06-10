@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="getblocktemplate" nsURI="http://getblocktemplate/1.0" nsPrefix="getblocktemplate">
-  <eClassifiers xsi:type="ecore:EClass" name="GetBlockTemplateCmd" eSuperTypes="../../net.sf.smbt.comm.http/model/httpcmd.ecore#//HttpCommCmd">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="jsonSnd" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="jsonRcv" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-</ecore:EPackage>
