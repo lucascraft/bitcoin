@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Bitcoin Wallet Manager
+Bundle-SymbolicName: net.sf.smbt.ui.btc.wallet.rcp; singleton:=true
+Bundle-Version: 0.5.0.qualifier
+Bundle-Activator: net.sf.smbt.ui.btc.wallet.rcp.Activator
+Bundle-Vendor: www.ubiquisense.com
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.intro,
+ net.sf.smbt.btc.wallet;bundle-version="1.0.0",
+ net.sf.smbt.ui.btc.wallet;bundle-version="0.5.0",
+ org.eclipse.core.filesystem;bundle-version="1.3.200",
+ org.eclipse.emf.common;bundle-version="2.8.0",
+ org.eclipse.emf.ecore;bundle-version="2.8.1",
+ org.eclipse.emf.ecore.edit;bundle-version="2.8.0",
+ org.eclipse.emf.ecoretools.tabbedproperties;bundle-version="1.1.0",
+ org.eclipse.emf.edit;bundle-version="2.8.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy

@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: UI Frontend for Butterfly Labs Comm Protocol
+Bundle-SymbolicName: net.sf.smbt.ui.bfl.mining
+Bundle-Version: 0.5.0.qualifier
+Bundle-Activator: net.sf.smbt.ui.bfl.mining.Activator
+Bundle-Vendor: www.ubiquisense.com
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ net.sf.smbt.bfl.bitforce.rev2;bundle-version="1.0.0",
+ net.sf.smbt.ui;bundle-version="0.5.0",
+ org.eclipse.jface.text;bundle-version="3.8.0",
+ net.sf.smbt.quantic;bundle-version="0.5.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Export-Package: net.sf.smbt.ui.bfl.mining,
+ net.sf.smbt.ui.bfl.mining.ui

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="net.sf.smbt.ui.btc.wallet.rcp.intro.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="net.sf.smbt.ui.btc.wallet.rcp.intro.Perspective"
+            id="net.sf.smbt.ui.btc.wallet.rcp.perspective">
+      </perspective>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="net.sf.smbt.ui.btc.wallet.rcp.application"
+            name="UbiWallet">
+         <property
+               name="windowImages"
+               value="icons/alt_window_16.gif,icons/alt_window_32.gif">
+         </property>
+         <property
+               name="appName"
+               value="UbiWallet">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro">
+      <intro
+            class="org.eclipse.ui.intro.config.CustomizableIntroPart"
+            id="net.sf.smbt.ui.btc.wallet.rcp.intro">
+      </intro>
+      <introProductBinding
+            introId="net.sf.smbt.ui.btc.wallet.rcp.intro"
+            productId="net.sf.smbt.ui.btc.wallet.rcp.product">
+      </introProductBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro.config">
+      <config
+            introId="net.sf.smbt.ui.btc.wallet.rcp.intro"
+            content="introContent.xml"
+            id="net.sf.smbt.ui.btc.wallet.rcp.configId">
+         <presentation
+               home-page-id="root">
+            <implementation
+                  kind="html"
+                  os="win32,linux,macosx">
+            </implementation>
+         </presentation>
+      </config>
+   </extension>
+
+</plugin>
